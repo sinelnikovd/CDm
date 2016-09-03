@@ -1,0 +1,125 @@
+@import "bourbon"
+@import "helpers/_reset.sass"
+@import "basic/sprite.sass"
+@import "basic/fonts.sass"
+@import "basic/vars/font-size.sass"
+@import "basic/vars/color.sass"
+//---addSmartScript---//
+
+*::-webkit-input-placeholder
+	color: #424242
+	opacity: 1
+
+
+*:-moz-placeholder
+	color: #424242
+	opacity: 1
+
+*::-moz-placeholder
+	color: #424242
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #424242
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #424242
+
+body input:required:valid,
+body textarea:required:valid
+	color: #424242
+
+body
+	font-size: 15px
+	min-width: 1200px
+	position: relative
+	line-height: 1.24
+	@extend %regural
+	font-weight: normal
+	overflow-x: hidden
+	color: $c1
+	background-color: $c3
+
+.container
+	width: 1165px
+	padding: 0 15px
+	margin: 0 auto
+
+/* icon */
+.icon
+	display: inline-block
+	&_plus
+		+sprite($s-plus)
+/* end icon */
+
+
+.select
+	border: 1px solid rgba($c7,.4)
+	box-sizing: border-box
+	&_small
+		+size(194px 37px)
+
+.btn
+	border: 1px solid rgba($c7,.4)
+	border-radius: 3px
+	cursor: pointer
+	display: inline-block
+	vertical-align: middle
+	position: relative
+	&_icon-small
+		+size(37px)
+		text-align: center
+	&__icon
+		position: absolute
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+		margin: auto
+
+
+.logo
+	&__link
+		display: block
+
+.call
+	color: $c5
+	padding-left: 12px
+	&__link
+		font-size: 24px
+		line-height: 1
+		color: $c4
+		text-decoration: none
+	&__worktime
+		margin-top: 2px
+
+.firm
+	.select
+		@extend %circe
+		font-size: 14px
+		color: $c6
+
+.top-line
+	padding: 35px 0 0
+	+clearfix
+	&__logo
+		float: left
+		width: 21.5%
+	&__call
+		float: left
+		width: 20.5%
+		border-left: 1px solid $c2
+	&__firm
+		float: left
+		width: 30%
+	&__account
+		float: right
+
+
+
+
+
+//ALWAYS END
+@import "basic/_media.sass"

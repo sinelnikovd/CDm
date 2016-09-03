@@ -1,0 +1,69 @@
+/*
+  SASS variables are information about icon's compiled state, stored under its original file name
+
+  .icon-home
+    width: $icon-home-width
+
+  The large array-like variables contain all information about a single icon
+  $icon-home: x y offset_x offset_y width height total_width total_height image_path
+  */
+$s-del-x: 0px
+$s-del-y: 0px
+$s-del-offset-x: 0px
+$s-del-offset-y: 0px
+$s-del-width: 16px
+$s-del-height: 16px
+$s-del-total-width: 32px
+$s-del-total-height: 30px
+$s-del-image: 'img/sprite.png'
+$s-del: 0px 0px 0px 0px 16px 16px 32px 30px 'media/img/sprite.png'
+$s-pen-x: 16px
+$s-pen-y: 0px
+$s-pen-offset-x: -16px
+$s-pen-offset-y: 0px
+$s-pen-width: 16px
+$s-pen-height: 16px
+$s-pen-total-width: 32px
+$s-pen-total-height: 30px
+$s-pen-image: 'img/sprite.png'
+$s-pen: 16px 0px -16px 0px 16px 16px 32px 30px 'media/img/sprite.png'
+$s-plus-x: 0px
+$s-plus-y: 16px
+$s-plus-offset-x: 0px
+$s-plus-offset-y: -16px
+$s-plus-width: 14px
+$s-plus-height: 14px
+$s-plus-total-width: 32px
+$s-plus-total-height: 30px
+$s-plus-image: 'img/sprite.png'
+$s-plus: 0px 16px 0px -16px 14px 14px 32px 30px 'media/img/sprite.png'
+
+/*
+  The provided mixins are intended to be used with the array-like variables
+
+  .icon-home
+    @include sprite-width($icon-home)
+
+  .icon-email
+    @include sprite($icon-email)
+  */
+@mixin sprite-width($sprite)
+  width: nth($sprite, 5)
+
+@mixin sprite-height($sprite)
+  height: nth($sprite, 6)
+
+@mixin sprite-position($sprite)
+  $sprite-offset-x: nth($sprite, 3)
+  $sprite-offset-y: nth($sprite, 4)
+  background-position: $sprite-offset-x  $sprite-offset-y
+
+@mixin sprite-image($sprite)
+  $sprite-image: nth($sprite, 9)
+  background-image: url(#{$sprite-image})
+
+@mixin sprite($sprite)
+  @include sprite-image($sprite)
+  @include sprite-position($sprite)
+  @include sprite-width($sprite)
+  @include sprite-height($sprite)
