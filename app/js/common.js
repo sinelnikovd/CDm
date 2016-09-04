@@ -4,4 +4,8 @@ $(document).ready(function() {
 		$('input.data-inputmask').mask("+7 (999) 999-99-99");
 	}
 
+	$('select').selectize();
+
+	$('.tab-container').easytabs();
+
 });

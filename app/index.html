@@ -29,12 +29,14 @@
           </div>
           <div class="top-line__firm">
             <div class="firm">
-              <select name="firm" class="select select_small">
-                <option value="ООО мирСк">ООО мирСк</option>
-                <option value="ООО мирСк">ООО мирСк</option>
-                <option value="ООО мирСк">ООО мирСк</option>
-                <option value="ООО мирСк">ООО мирСк</option>
-              </select><a href="#" class="btn btn_icon-small"><i class="icon icon_plus btn__icon"></i></a>
+              <div class="firm__select">
+                <select name="firm" class="select select_small">
+                  <option value="ООО мирСк">ООО мирСк</option>
+                  <option value="ООО мирСк1">ООО мирСк1</option>
+                  <option value="ООО мирСк2">ООО мирСк2</option>
+                  <option value="ООО мирСк3">ООО мирСк3</option>
+                </select>
+              </div><a href="#" class="btn btn_icon-small"><i class="icon icon_plus btn__icon"></i></a>
             </div>
           </div>
           <div class="top-line__account">
@@ -43,7 +45,7 @@
               <div class="account__control">
                 <div class="account__name">Елена</div>
                 <div class="account__dropdown">
-                  <hr class="account__hr"><a href="#" class="account__link"><i class="icon icon_settings"></i>Настройка аккаунта</a><a href="#" class="account__link"><i class="icon icon_close"></i>Выйти</a>
+                  <hr class="account__hr"><a href="#" class="account__link"><i class="icon icon_settings account__icon"></i>Настройка аккаунта</a><a href="#" class="account__link"><i class="icon icon_close account__icon"></i>Выйти</a>
                 </div>
               </div>
             </div>
@@ -53,7 +55,10 @@
       <nav class="nav">
         <div class="container">
           <ul class="nav__list">
-            <li class="nav__item"><a href="#" class="nav__link">Статистика</a><a href="#" class="nav__link">Ход работы</a><a href="#" class="nav__link">Поддержка</a><a href="#" class="nav__link">Менеджеры</a></li>
+            <li class="nav__item active"><a href="#" class="nav__link">Статистика</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">Ход работы</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">Поддержка</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">Менеджеры</a></li>
           </ul>
         </div>
       </nav>
@@ -62,7 +67,7 @@
     <!-- BEGIN COMPANY-LINE-->
     <div class="company-line">
       <div class="container">
-        <div class="company-line__control">
+        <div class="company-line__select">
           <select name="company" class="select select_big">
             <option value="itc-media.ru">itc-media.ru</option>
             <option value="itc-media.ru">itc-media.ru</option>
@@ -70,9 +75,9 @@
             <option value="itc-media.ru">itc-media.ru</option>
           </select>
         </div>
-        <div class="company-line__control"><a href="#" class="btn btn_icon"><i class="icon icon_pen"></i></a></div>
-        <div class="company-line__control"><a href="#" class="btn btn_icon"><i class="icon icon_del"></i></a></div>
-        <div class="company-line__control"><a href="#" class="company-line__add"><i class="icon icon_plus1"></i>Добавить сайт</a></div>
+        <div class="company-line__btn"><a href="#" class="btn btn_icon-big"><i class="icon icon_pen btn__icon"></i></a></div>
+        <div class="company-line__btn"><a href="#" class="btn btn_icon-big"><i class="icon icon_del btn__icon"></i></a></div>
+        <div class="company-line__add-site"><a href="#" class="add-site"><i class="icon icon_plus1 add-site__icon"></i>Добавить сайт</a></div>
       </div>
     </div>
     <!-- END COMPANY-LINE-->
@@ -87,10 +92,13 @@
             <li class="tab-nav__item tab-nav__item_green"><a href="#tab-item-3" class="tab-nav__link">Ключевые фразы</a></li>
           </ul>
           <div id="tab-item-1" class="tab">
+            <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Составитель диких океана страну продолжил, безорфографичный точках сбить наш гор!</p>
+          </div>
+          <div id="tab-item-2" class="tab">
             <div class="attendance">
               <div class="block block_gray">
                 <div class="attendance-stage"><span class="attendance-stage__text">Период отчета:</span>
-                  <div class="attendance-block attendance-block_icon">1 мая  2016 - 1 июня 2016</div>
+                  <div class="attendance-block attendance-block_icon attendance-block_border">1 мая  2016 - 1 июня 2016</div>
                 </div>
               </div>
               <div class="attendance-sort">
@@ -102,114 +110,40 @@
                   <li class="attendance-sort__item"><span class="attendance-sort__num">102</span>топ 10</li>
                   <li class="attendance-sort__item"><span class="attendance-sort__num">102</span>топ 30</li>
                   <li class="attendance-sort__item"><span class="attendance-sort__num">102</span>100</li>
-                  <li class="attendance-sort__item attendance-sort__item_top">(27)</li>
-                  <li class="attendance-sort__item attendance-sort__item_down">(16)</li>
+                  <li class="attendance-sort__item"><i class="icon icon_up"></i> (27)</li>
+                  <li class="attendance-sort__item"><i class="icon icon_down"></i> (16)</li>
                 </ul>
-                <select name="" class="attendance-sort__select">
-                  <option value="Все  ПС">Все  ПС</option>
-                  <option value="Все  ПС">Все  ПС</option>
-                  <option value="Все  ПС">Все  ПС</option>
-                  <option value="Все  ПС">Все  ПС</option>
-                </select>
+                <div class="attendance-sort__select">
+                  <select name="">
+                    <option value="Все  ПС">Все  ПС</option>
+                    <option value="Все  ПС">Все  ПС</option>
+                    <option value="Все  ПС">Все  ПС</option>
+                    <option value="Все  ПС">Все  ПС</option>
+                  </select>
+                </div>
               </div>
             </div>
             <div class="attendance__title"><i class="icon icon_ya"></i>Яндекс Россия Брянск</div>
-            <div class="tabel-container">
-              <tabel class="tabel">
-                <thead class="tabel__head">
+            <div class="table-container">
+              <div class="tabel-header">
+                <table class="table">
                   <tr>
-                    <td></td>
-                    <div class="checkbox">
-                      <label for="checkbox-id-1" class="checkbox__label"></label>
-                      <input type="checkbox" id="checkbox-id-1" class="checkbox__input">
-                    </div>
+                    <td>
+                      <div class="checkbox">
+                        <input type="checkbox" id="checkbox-id-1" class="checkbox__input">
+                        <label for="checkbox-id-1" class="checkbox__label"></label>
+                      </div>
+                    </td>
                     <th>Запрос</th>
-                    <td>URL<a href="#" class="question"><i class="icon icon_question"></i></a></td>
-                    <td>26-Июл</td>
-                    <td>02-август</td>
-                    <td>09-Август</td>
-                    <td>16-Август</td>
-                    <td>Всего</td>
+                    <td class="td_url">URL<a href="#" class="question"><i class="icon icon_question"></i></a></td>
+                    <td class="td_data">26-Июл</td>
+                    <td class="td_data">02-август</td>
+                    <td class="td_data">09-Август</td>
+                    <td class="td_data">16-Август</td>
+                    <td class="td_total">Всего</td>
                   </tr>
-                </thead>
-                <tbody class="tabel__body">
-                  <tr>
-                    <td>
-                      <div class="checkbox checkbox_blue">
-                        <label for="checkbox-id-1" class="checkbox__label"></label>
-                        <input type="checkbox" id="checkbox-id-1" class="checkbox__input">
-                      </div>
-                    </td>
-                    <th>компьютерная помощь</th>
-                    <td><a href="#" class="link"><i class="icon icon_link"></i></a></td>
-                    <td>23 <br>0 р.</td>
-                    <td>23<i class="icon icon_up"></i>2 <br>0 р.</td>
-                    <td>23<i class="icon icon_up"></i>2 <br>0 р.</td>
-                    <td>23<i class="icon icon_up"></i>2 <br>0 р.</td>
-                    <td>0 р.</td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="checkbox checkbox_blue">
-                        <label for="checkbox-id-1" class="checkbox__label"></label>
-                        <input type="checkbox" id="checkbox-id-1" class="checkbox__input">
-                      </div>
-                    </td>
-                    <th>компьютерная помощь</th>
-                    <td><a href="#" class="link"><i class="icon icon_link"></i></a></td>
-                    <td>23 <br>0 р.</td>
-                    <td>23<i class="icon icon_up"></i>2 <br>0 р.</td>
-                    <td>23<i class="icon icon_up"></i>2 <br>0 р.</td>
-                    <td>23<i class="icon icon_up"></i>2 <br>0 р.</td>
-                    <td>0 р.</td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="checkbox checkbox_blue">
-                        <label for="checkbox-id-1" class="checkbox__label"></label>
-                        <input type="checkbox" id="checkbox-id-1" class="checkbox__input">
-                      </div>
-                    </td>
-                    <th>компьютерная помощь</th>
-                    <td><a href="#" class="link"><i class="icon icon_link"></i></a></td>
-                    <td>23 <br>0 р.</td>
-                    <td>23<i class="icon icon_up"></i>2 <br>0 р.</td>
-                    <td>23<i class="icon icon_up"></i>2 <br>0 р.</td>
-                    <td>23<i class="icon icon_up"></i>2 <br>0 р.</td>
-                    <td>0 р.</td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="checkbox checkbox_blue">
-                        <label for="checkbox-id-1" class="checkbox__label"></label>
-                        <input type="checkbox" id="checkbox-id-1" class="checkbox__input">
-                      </div>
-                    </td>
-                    <th>компьютерная помощь</th>
-                    <td><a href="#" class="link"><i class="icon icon_link"></i></a></td>
-                    <td>23 <br>0 р.</td>
-                    <td>23<i class="icon icon_up"></i>2 <br>0 р.</td>
-                    <td>23<i class="icon icon_up"></i>2 <br>0 р.</td>
-                    <td>23<i class="icon icon_up"></i>2 <br>0 р.</td>
-                    <td>0 р.</td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="checkbox checkbox_blue">
-                        <label for="checkbox-id-1" class="checkbox__label"></label>
-                        <input type="checkbox" id="checkbox-id-1" class="checkbox__input">
-                      </div>
-                    </td>
-                    <th>компьютерная помощь</th>
-                    <td><a href="#" class="link"><i class="icon icon_link"></i></a></td>
-                    <td>23 <br>0 р.</td>
-                    <td>23<i class="icon icon_up"></i>2 <br>0 р.</td>
-                    <td>23<i class="icon icon_up"></i>2 <br>0 р.</td>
-                    <td>23<i class="icon icon_up"></i>2 <br>0 р.</td>
-                    <td>0 р.</td>
-                  </tr>
-                </tbody>
-              </tabel>
+                </table>
+              </div>
               <div class="total">Всего:<span class="total__num">0р.</span></div>
             </div>
             <div class="block block_blue">
@@ -232,7 +166,7 @@
               </div>
             </div>
           </div>
-          <div id="tab-item-1" class="tab">
+          <div id="tab-item-3" class="tab">
             <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Меня не, рукописи на берегу города родного путь. То, взгляд за.</p>
           </div>
         </div>
@@ -243,13 +177,13 @@
     <footer class="footer">
       <div class="container">
         <div class="footer__block">
-          <p>©2016 СRM<br><a href="#">Условия использования</a></p>
+          <p>©2016 СRM<br><a href="#" class="footer__link">Условия использования</a></p>
         </div>
         <div class="footer__block">
-          <p> 8 800 700-87-31 <br><a href="#">Обратный звонок</a></p>
+          <p> <a href="tel:8 800 700-87-31" class="footer__link footer__link_noline">8 800 700-87-31 </a><br><a href="#" class="footer__link">Обратный звонок</a></p>
         </div>
         <div class="footer__block">
-          <p><a href="mailto:support@CRM.ru" class="email">support@CRM.ru</a></p>
+          <p><a href="mailto:support@CRM.ru" class="footer__link footer__link_noline">support@CRM.ru</a></p>
         </div>
       </div>
     </footer>
@@ -263,6 +197,8 @@
     <script src="libs/modernizr/modernizr.js"></script>
     <script src="libs/jquery/jquery-3.1.0.min.js"></script>
     <script src="libs/inputmask/inputmask.js"></script>
+    <script src="libs/selectize/selectize.min.js"></script>
+    <script src="libs/easytabs/jquery.easytabs.min.js"></script>
     <script src="js/common.js"></script>
   </body>
 </html>

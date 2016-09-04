@@ -18,11 +18,12 @@ block content
 						.call__worktime по будням с 9:00 до 18:00
 				.top-line__firm
 					.firm
-						select(name="firm").select.select_small
-								option(value="ООО мирСк") ООО мирСк
-								option(value="ООО мирСк") ООО мирСк
-								option(value="ООО мирСк") ООО мирСк
-								option(value="ООО мирСк") ООО мирСк
+						.firm__select
+							select(name="firm").select.select_small
+									option(value="ООО мирСк") ООО мирСк
+									option(value="ООО мирСк1") ООО мирСк1
+									option(value="ООО мирСк2") ООО мирСк2
+									option(value="ООО мирСк3") ООО мирСк3
 						a(href="#").btn.btn_icon-small
 							i.icon.icon_plus.btn__icon
 				.top-line__account
@@ -33,39 +34,42 @@ block content
 							.account__dropdown
 								hr.account__hr
 								a(href="#").account__link
-									i.icon.icon_settings
+									i.icon.icon_settings.account__icon
 									| Настройка аккаунта
 								a(href="#").account__link
-									i.icon.icon_close
+									i.icon.icon_close.account__icon
 									| Выйти
 		nav.nav
 			.container
 				ul.nav__list
-					li.nav__item
+					li.nav__item.active
 						a(href="#").nav__link Статистика
+					li.nav__item
 						a(href="#").nav__link Ход работы
+					li.nav__item
 						a(href="#").nav__link Поддержка
+					li.nav__item
 						a(href="#").nav__link Менеджеры
 	// END HEADER
 
 	// BEGIN COMPANY-LINE
 	.company-line
 		.container
-			.company-line__control
+			.company-line__select
 				select(name="company").select.select_big
 					option(value="itc-media.ru") itc-media.ru
 					option(value="itc-media.ru") itc-media.ru
 					option(value="itc-media.ru") itc-media.ru
 					option(value="itc-media.ru") itc-media.ru
-			.company-line__control
-				a(href="#").btn.btn_icon
-					i.icon.icon_pen
-			.company-line__control
-				a(href="#").btn.btn_icon
-					i.icon.icon_del
-			.company-line__control
-				a(href="#").company-line__add
-					i.icon.icon_plus1
+			.company-line__btn
+				a(href="#").btn.btn_icon-big
+					i.icon.icon_pen.btn__icon
+			.company-line__btn
+				a(href="#").btn.btn_icon-big
+					i.icon.icon_del.btn__icon
+			.company-line__add-site
+				a(href="#").add-site
+					i.icon.icon_plus1.add-site__icon
 					| Добавить сайт
 	// END COMPANY-LINE
 
@@ -82,11 +86,13 @@ block content
 					li.tab-nav__item.tab-nav__item_green
 						a(href="#tab-item-3").tab-nav__link Ключевые фразы
 				.tab#tab-item-1
+					p Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Составитель диких океана страну продолжил, безорфографичный точках сбить наш гор!
+				.tab#tab-item-2
 					.attendance
 						.block.block_gray
 							.attendance-stage
 								span.attendance-stage__text Период отчета:
-								.attendance-block.attendance-block_icon 1 мая  2016 - 1 июня 2016
+								.attendance-block.attendance-block_icon.attendance-block_border 1 мая  2016 - 1 июня 2016
 						.attendance-sort
 							ul.attendance-sort__list
 								li.attendance-sort__item
@@ -110,137 +116,41 @@ block content
 								li.attendance-sort__item
 									span.attendance-sort__num 102
 									| 100
-								li.attendance-sort__item.attendance-sort__item_top (27)
-								li.attendance-sort__item.attendance-sort__item_down (16)
-
-							select(name="").attendance-sort__select
-								option(value="Все  ПС") Все  ПС
-								option(value="Все  ПС") Все  ПС
-								option(value="Все  ПС") Все  ПС
-								option(value="Все  ПС") Все  ПС
+								li.attendance-sort__item
+									i.icon.icon_up
+									|  (27)
+								li.attendance-sort__item
+									i.icon.icon_down
+									|  (16)
+							.attendance-sort__select
+								select(name="")
+									option(value="Все  ПС") Все  ПС
+									option(value="Все  ПС") Все  ПС
+									option(value="Все  ПС") Все  ПС
+									option(value="Все  ПС") Все  ПС
 
 					.attendance__title
 						i.icon.icon_ya
 						| Яндекс Россия Брянск
 					
-					.tabel-container
-						tabel.tabel
-							thead.tabel__head
+					.table-container
+						.tabel-header
+							table.table
 								tr
 									td
-									.checkbox
-										label(for="checkbox-id-1").checkbox__label
-										input(type="checkbox").checkbox__input#checkbox-id-1
+										.checkbox
+											input(type="checkbox").checkbox__input#checkbox-id-1
+											label(for="checkbox-id-1").checkbox__label
 									th Запрос
-									td URL
+									td.td_url URL
 										a(href="#").question
 											i.icon.icon_question
-									td 26-Июл
-									td 02-август
-									td 09-Август
-									td 16-Август
-									td Всего
-							tbody.tabel__body
-								tr
-									td
-										.checkbox.checkbox_blue
-											label(for="checkbox-id-1").checkbox__label
-											input(type="checkbox").checkbox__input#checkbox-id-1
-									th компьютерная помощь
-									td
-										a(href="#").link
-											i.icon.icon_link
-									td 23 <br>0 р.
-									td 23
-										i.icon.icon_up
-										| 2 <br>0 р.
-									td 23
-										i.icon.icon_up
-										| 2 <br>0 р.
-									td 23
-										i.icon.icon_up
-										| 2 <br>0 р.
-									td 0 р.
-								tr
-									td
-										.checkbox.checkbox_blue
-											label(for="checkbox-id-1").checkbox__label
-											input(type="checkbox").checkbox__input#checkbox-id-1
-									th компьютерная помощь
-									td
-										a(href="#").link
-											i.icon.icon_link
-									td 23 <br>0 р.
-									td 23
-										i.icon.icon_up
-										| 2 <br>0 р.
-									td 23
-										i.icon.icon_up
-										| 2 <br>0 р.
-									td 23
-										i.icon.icon_up
-										| 2 <br>0 р.
-									td 0 р.
-								tr
-									td
-										.checkbox.checkbox_blue
-											label(for="checkbox-id-1").checkbox__label
-											input(type="checkbox").checkbox__input#checkbox-id-1
-									th компьютерная помощь
-									td
-										a(href="#").link
-											i.icon.icon_link
-									td 23 <br>0 р.
-									td 23
-										i.icon.icon_up
-										| 2 <br>0 р.
-									td 23
-										i.icon.icon_up
-										| 2 <br>0 р.
-									td 23
-										i.icon.icon_up
-										| 2 <br>0 р.
-									td 0 р.
-								tr
-									td
-										.checkbox.checkbox_blue
-											label(for="checkbox-id-1").checkbox__label
-											input(type="checkbox").checkbox__input#checkbox-id-1
-									th компьютерная помощь
-									td
-										a(href="#").link
-											i.icon.icon_link
-									td 23 <br>0 р.
-									td 23
-										i.icon.icon_up
-										| 2 <br>0 р.
-									td 23
-										i.icon.icon_up
-										| 2 <br>0 р.
-									td 23
-										i.icon.icon_up
-										| 2 <br>0 р.
-									td 0 р.
-								tr
-									td
-										.checkbox.checkbox_blue
-											label(for="checkbox-id-1").checkbox__label
-											input(type="checkbox").checkbox__input#checkbox-id-1
-									th компьютерная помощь
-									td
-										a(href="#").link
-											i.icon.icon_link
-									td 23 <br>0 р.
-									td 23
-										i.icon.icon_up
-										| 2 <br>0 р.
-									td 23
-										i.icon.icon_up
-										| 2 <br>0 р.
-									td 23
-										i.icon.icon_up
-										| 2 <br>0 р.
-									td 0 р.
+									td.td_data 26-Июл
+									td.td_data 02-август
+									td.td_data 09-Август
+									td.td_data 16-Август
+									td.td_total Всего
+							
 						.total Всего:
 							span.total__num 0р.
 
@@ -263,7 +173,7 @@ block content
 								
 								a(href="#") Читать полностью
 							img(src="media/img/google.png", alt="")
-				.tab#tab-item-1
+				.tab#tab-item-3
 					p Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Меня не, рукописи на берегу города родного путь. То, взгляд за.
 	// END CONTENT
 
@@ -273,12 +183,13 @@ block content
 			.footer__block
 				p ©2016 СRM
 					br
-					a(href="#") Условия использования
+					a(href="#").footer__link Условия использования
 			.footer__block
-				p  8 800 700-87-31 
+				p 
+					a(href="tel:8 800 700-87-31").footer__link.footer__link_noline 8 800 700-87-31 
 					br
-					a(href="#") Обратный звонок
+					a(href="#").footer__link Обратный звонок
 			.footer__block
 				p
-					a(href="mailto:support@CRM.ru").email support@CRM.ru
+					a(href="mailto:support@CRM.ru").footer__link.footer__link_noline support@CRM.ru
 	// END FOOTER
