@@ -30,7 +30,7 @@
           <div class="top-line__firm">
             <div class="firm">
               <div class="firm__select">
-                <select name="firm" class="select select_small">
+                <select name="firm" id="select_firm" class="select select_small">
                   <option value="ООО мирСк">ООО мирСк</option>
                   <option value="ООО мирСк1">ООО мирСк1</option>
                   <option value="ООО мирСк2">ООО мирСк2</option>
@@ -68,11 +68,11 @@
     <div class="company-line">
       <div class="container">
         <div class="company-line__select">
-          <select name="company" class="select select_big">
-            <option value="itc-media.ru">itc-media.ru</option>
-            <option value="itc-media.ru">itc-media.ru</option>
-            <option value="itc-media.ru">itc-media.ru</option>
-            <option value="itc-media.ru">itc-media.ru</option>
+          <select name="company" id="select_company" class="select select_big">
+            <option value="itc-media.ru" data-data="{&quot;stat&quot;:true}">itc-media.ru</option>
+            <option value="itc-media.ru1" data-data="{&quot;stat&quot;:true}">itc-media.ru</option>
+            <option value="itc-media.ru2" data-data="{&quot;stat&quot;:false}">itc-media.ru</option>
+            <option value="itc-media.ru3" data-data="{&quot;stat&quot;:true}">itc-media.ru</option>
           </select>
         </div>
         <div class="company-line__btn"><a href="#" class="btn btn_icon-big"><i class="icon icon_pen btn__icon"></i></a></div>
@@ -98,7 +98,7 @@
             <div class="attendance">
               <div class="block block_gray">
                 <div class="attendance-stage"><span class="attendance-stage__text">Период отчета:</span>
-                  <div class="attendance-block attendance-block_icon attendance-block_border">1 мая  2016 - 1 июня 2016</div>
+                  <div class="attendance-block attendance-block_icon attendance-block_border attendance-block_white">1 мая  2016 - 1 июня 2016</div>
                 </div>
               </div>
               <div class="attendance-sort">
@@ -114,7 +114,7 @@
                   <li class="attendance-sort__item"><i class="icon icon_down"></i> (16)</li>
                 </ul>
                 <div class="attendance-sort__select">
-                  <select name="">
+                  <select name="" id="select_sort" class="select select_small">
                     <option value="Все  ПС">Все  ПС</option>
                     <option value="Все  ПС">Все  ПС</option>
                     <option value="Все  ПС">Все  ПС</option>
@@ -122,47 +122,196 @@
                   </select>
                 </div>
               </div>
-            </div>
-            <div class="attendance__title"><i class="icon icon_ya"></i>Яндекс Россия Брянск</div>
-            <div class="table-container">
-              <div class="tabel-header">
-                <table class="table">
-                  <tr>
-                    <td>
-                      <div class="checkbox">
-                        <input type="checkbox" id="checkbox-id-1" class="checkbox__input">
-                        <label for="checkbox-id-1" class="checkbox__label"></label>
-                      </div>
-                    </td>
-                    <th>Запрос</th>
-                    <td class="td_url">URL<a href="#" class="question"><i class="icon icon_question"></i></a></td>
-                    <td class="td_data">26-Июл</td>
-                    <td class="td_data">02-август</td>
-                    <td class="td_data">09-Август</td>
-                    <td class="td_data">16-Август</td>
-                    <td class="td_total">Всего</td>
-                  </tr>
-                </table>
+              <div class="attendance__title"><i class="icon icon_ya"></i>Яндекс Россия Брянск</div>
+              <div class="table-container">
+                <div class="table-wraper">
+                  <table class="table">
+                    <thead class="table__head">
+                      <tr>
+                        <td>
+                          <div class="checkbox">
+                            <input type="checkbox" id="checkbox-id-1" class="checkbox__input">
+                            <label for="checkbox-id-1" class="checkbox__label"></label>
+                          </div>
+                        </td>
+                        <th>Запрос</th>
+                        <td class="table__url"><span>URL</span>
+                          <div class="question"><a href="#" class="question__link"><i class="icon icon_question"></i></a>
+                            <div class="question__tooltip">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.</div>
+                          </div>
+                        </td>
+                        <td>26-Июл</td>
+                        <td>02-август</td>
+                        <td>09-Август</td>
+                        <td>16-Август</td>
+                        <td class="table__total">Всего</td>
+                      </tr>
+                      <tr>
+                        <td class="table__indent"></td>
+                      </tr>
+                    </thead>
+                    <tbody class="table__body">
+                      <tr>
+                        <td>
+                          <div class="checkbox checkbox_blue">
+                            <input type="checkbox" id="checkbox-id-2" class="checkbox__input">
+                            <label for="checkbox-id-2" class="checkbox__label"></label>
+                          </div>
+                        </td>
+                        <th>компьютерная помощь Брянск</th>
+                        <td> <a href="#" class="icon-link"><i class="icon icon_link"></i></a></td>
+                        <td>
+                          <div class="attendance-mark">23<br>0 р.</div>
+                        </td>
+                        <td>
+                          <div class="attendance-mark attendance-mark_up">23 <i class="icon attendance__icon"></i> 2<br>0 р.</div>
+                        </td>
+                        <td>
+                          <div class="attendance-mark attendance-mark_up">23 <i class="icon attendance__icon"></i> 2<br>0 р.</div>
+                        </td>
+                        <td>
+                          <div class="attendance-mark attendance-mark_down">23 <i class="icon attendance__icon"></i> 2<br>0 р.</div>
+                        </td>
+                        <td>0 р.</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="checkbox checkbox_blue">
+                            <input type="checkbox" id="checkbox-id-3" class="checkbox__input">
+                            <label for="checkbox-id-3" class="checkbox__label"></label>
+                          </div>
+                        </td>
+                        <th>компьютерная помощь Брянск</th>
+                        <td> <a href="#" class="icon-link"><i class="icon icon_link"></i></a></td>
+                        <td>
+                          <div class="attendance-mark">23<br>0 р.</div>
+                        </td>
+                        <td>
+                          <div class="attendance-mark attendance-mark_up">23 <i class="icon attendance__icon"></i> 2<br>0 р.</div>
+                        </td>
+                        <td>
+                          <div class="attendance-mark attendance-mark_up">23 <i class="icon attendance__icon"></i> 2<br>0 р.</div>
+                        </td>
+                        <td>
+                          <div class="attendance-mark attendance-mark_down">23 <i class="icon attendance__icon"></i> 2<br>0 р.</div>
+                        </td>
+                        <td>0 р.</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="checkbox checkbox_blue">
+                            <input type="checkbox" id="checkbox-id-4" class="checkbox__input">
+                            <label for="checkbox-id-4" class="checkbox__label"></label>
+                          </div>
+                        </td>
+                        <th>компьютерная помощь Брянск</th>
+                        <td> <a href="#" class="icon-link"><i class="icon icon_link"></i></a></td>
+                        <td>
+                          <div class="attendance-mark">23<br>0 р.</div>
+                        </td>
+                        <td>
+                          <div class="attendance-mark attendance-mark_up">23 <i class="icon attendance__icon"></i> 2<br>0 р.</div>
+                        </td>
+                        <td>
+                          <div class="attendance-mark attendance-mark_up">23 <i class="icon attendance__icon"></i> 2<br>0 р.</div>
+                        </td>
+                        <td>
+                          <div class="attendance-mark attendance-mark_down">23 <i class="icon attendance__icon"></i> 2<br>0 р.</div>
+                        </td>
+                        <td>0 р.</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="checkbox checkbox_blue">
+                            <input type="checkbox" id="checkbox-id-5" class="checkbox__input">
+                            <label for="checkbox-id-5" class="checkbox__label"></label>
+                          </div>
+                        </td>
+                        <th>компьютерная помощь Брянск</th>
+                        <td> <a href="#" class="icon-link"><i class="icon icon_link"></i></a></td>
+                        <td>
+                          <div class="attendance-mark">23<br>0 р.</div>
+                        </td>
+                        <td>
+                          <div class="attendance-mark attendance-mark_up">23 <i class="icon attendance__icon"></i> 2<br>0 р.</div>
+                        </td>
+                        <td>
+                          <div class="attendance-mark attendance-mark_up">23 <i class="icon attendance__icon"></i> 2<br>0 р.</div>
+                        </td>
+                        <td>
+                          <div class="attendance-mark attendance-mark_down">23 <i class="icon attendance__icon"></i> 2<br>0 р.</div>
+                        </td>
+                        <td>0 р.</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="checkbox checkbox_blue">
+                            <input type="checkbox" id="checkbox-id-6" class="checkbox__input">
+                            <label for="checkbox-id-6" class="checkbox__label"></label>
+                          </div>
+                        </td>
+                        <th>компьютерная помощь Брянск</th>
+                        <td> <a href="#" class="icon-link"><i class="icon icon_link"></i></a></td>
+                        <td>
+                          <div class="attendance-mark">23<br>0 р.</div>
+                        </td>
+                        <td>
+                          <div class="attendance-mark attendance-mark_up attendance-mark_good">23 <i class="icon attendance__icon"></i> 2<br>0 р.</div>
+                        </td>
+                        <td>
+                          <div class="attendance-mark attendance-mark_up attendance-mark_bad">23 <i class="icon attendance__icon"></i> 2<br>0 р.</div>
+                        </td>
+                        <td>
+                          <div class="attendance-mark attendance-mark_down">23 <i class="icon attendance__icon"></i> 2<br>0 р.</div>
+                        </td>
+                        <td>0 р.</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="checkbox checkbox_blue">
+                            <input type="checkbox" id="checkbox-id-7" class="checkbox__input">
+                            <label for="checkbox-id-7" class="checkbox__label"></label>
+                          </div>
+                        </td>
+                        <th>компьютерная помощь Брянск</th>
+                        <td> <a href="#" class="icon-link"><i class="icon icon_link"></i></a></td>
+                        <td>
+                          <div class="attendance-mark">23<br>0 р.</div>
+                        </td>
+                        <td>
+                          <div class="attendance-mark attendance-mark_up">23 <i class="icon attendance__icon"></i> 2<br>0 р.</div>
+                        </td>
+                        <td>
+                          <div class="attendance-mark attendance-mark_up">23 <i class="icon attendance__icon"></i> 2<br>0 р.</div>
+                        </td>
+                        <td>
+                          <div class="attendance-mark attendance-mark_down">23 <i class="icon attendance__icon"></i> 2<br>0 р.</div>
+                        </td>
+                        <td>0 р.</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <div class="total">Всего:<span class="total__num"> 0р.</span></div>
+                </div>
               </div>
-              <div class="total">Всего:<span class="total__num">0р.</span></div>
-            </div>
-            <div class="block block_blue">
-              <p>Напомним, что мы настоятельно не рекомендуем точечно влиять на ранжирование поисковых систем по мем или иным запросам. <br>Просьба ознакомиться с лицензиями поисковых систем:</p>
-            </div>
-            <div class="row">
-              <div class="col-6">
-                <h3>Справка Google</h3>
-                <div class="block block_gray">
-                  <p>Чтобы показать заказчику эскизы, нужно где-то найти тексты и картинки. Как правило, ни того, ни другого в момент показа эскизов у дизайнера нету. Что же делает дизайнер? Рыбу. </p>
-                  <p>Рыбу можно вставлять, использовать, вешать, заливать, показывать, запихивать...</p><a href="#">Читать полностью</a>
-                </div><img src="media/img/ya.png" alt="">
-              </div>
-              <div class="col-6">
-                <h3>Справка Google</h3>
-                <div class="block block_gray">
-                  <p>Чтобы показать заказчику эскизы, нужно где-то найти тексты и картинки. Как правило, ни того, ни другого в момент показа эскизов у дизайнера нету. Что же делает дизайнер? Рыбу. </p>
-                  <p>Рыбу можно вставлять, использовать, вешать, заливать, показывать, запихивать...</p><a href="#">Читать полностью</a>
-                </div><img src="media/img/google.png" alt="">
+              <div class="block block_border-blue attendance__block">
+                <p>Напомним, что мы настоятельно не рекомендуем точечно влиять на ранжирование поисковых систем по мем или иным запросам. <br>Просьба ознакомиться с лицензиями поисковых систем:</p>
+                <div class="row">
+                  <div class="col-6">
+                    <h3>Лицензия Яндекса</h3>
+                    <div class="block block_gray">
+                      <p>Чтобы показать заказчику эскизы, нужно где-то найти тексты и картинки. Как правило, ни того, ни другого в момент показа эскизов у дизайнера нету. Что же делает дизайнер? Рыбу. </p>
+                      <p>Рыбу можно вставлять, использовать, вешать, заливать, показывать, запихивать...</p><a href="#" class="link">Читать полностью</a>
+                    </div><img src="media/img/ya.png" alt="">
+                  </div>
+                  <div class="col-6">
+                    <h3>Справка Google</h3>
+                    <div class="block block_gray">
+                      <p>Чтобы показать заказчику эскизы, нужно где-то найти тексты и картинки. Как правило, ни того, ни другого в момент показа эскизов у дизайнера нету. Что же делает дизайнер? Рыбу. </p>
+                      <p>Рыбу можно вставлять, использовать, вешать, заливать, показывать, запихивать...</p><a href="#" class="link">Читать полностью</a>
+                    </div><img src="media/img/google.png" alt="">
+                  </div>
+                </div>
               </div>
             </div>
           </div>

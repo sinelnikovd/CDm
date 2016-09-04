@@ -19,7 +19,7 @@ block content
 				.top-line__firm
 					.firm
 						.firm__select
-							select(name="firm").select.select_small
+							select(name="firm").select.select_small#select_firm
 									option(value="ООО мирСк") ООО мирСк
 									option(value="ООО мирСк1") ООО мирСк1
 									option(value="ООО мирСк2") ООО мирСк2
@@ -56,11 +56,11 @@ block content
 	.company-line
 		.container
 			.company-line__select
-				select(name="company").select.select_big
-					option(value="itc-media.ru") itc-media.ru
-					option(value="itc-media.ru") itc-media.ru
-					option(value="itc-media.ru") itc-media.ru
-					option(value="itc-media.ru") itc-media.ru
+				select(name="company").select.select_big#select_company
+					option(value="itc-media.ru" data-data='{"stat":true}') itc-media.ru
+					option(value="itc-media.ru1" data-data='{"stat":true}') itc-media.ru
+					option(value="itc-media.ru2" data-data='{"stat":false}') itc-media.ru
+					option(value="itc-media.ru3" data-data='{"stat":true}') itc-media.ru
 			.company-line__btn
 				a(href="#").btn.btn_icon-big
 					i.icon.icon_pen.btn__icon
@@ -92,7 +92,7 @@ block content
 						.block.block_gray
 							.attendance-stage
 								span.attendance-stage__text Период отчета:
-								.attendance-block.attendance-block_icon.attendance-block_border 1 мая  2016 - 1 июня 2016
+								.attendance-block.attendance-block_icon.attendance-block_border.attendance-block_white 1 мая  2016 - 1 июня 2016
 						.attendance-sort
 							ul.attendance-sort__list
 								li.attendance-sort__item
@@ -123,56 +123,256 @@ block content
 									i.icon.icon_down
 									|  (16)
 							.attendance-sort__select
-								select(name="")
+								select(name="").select.select_small#select_sort
 									option(value="Все  ПС") Все  ПС
 									option(value="Все  ПС") Все  ПС
 									option(value="Все  ПС") Все  ПС
 									option(value="Все  ПС") Все  ПС
 
-					.attendance__title
-						i.icon.icon_ya
-						| Яндекс Россия Брянск
-					
-					.table-container
-						.tabel-header
-							table.table
-								tr
-									td
-										.checkbox
-											input(type="checkbox").checkbox__input#checkbox-id-1
-											label(for="checkbox-id-1").checkbox__label
-									th Запрос
-									td.td_url URL
-										a(href="#").question
-											i.icon.icon_question
-									td.td_data 26-Июл
-									td.td_data 02-август
-									td.td_data 09-Август
-									td.td_data 16-Август
-									td.td_total Всего
-							
-						.total Всего:
-							span.total__num 0р.
+						.attendance__title
+							i.icon.icon_ya
+							| Яндекс Россия Брянск
+						
+						.table-container
+							.table-wraper
+								table.table
+									thead.table__head
+										tr
+											td
+												.checkbox
+													input(type="checkbox").checkbox__input#checkbox-id-1
+													label(for="checkbox-id-1").checkbox__label
+											th Запрос
+											td.table__url
+												span URL
+												.question
+													a(href="#").question__link
+														i.icon.icon_question
+													.question__tooltip Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.
+											td 26-Июл
+											td 02-август
+											td 09-Август
+											td 16-Август
+											td.table__total Всего
+										tr
+											td.table__indent
+									tbody.table__body
+										tr
+											td
+												.checkbox.checkbox_blue
+													input(type="checkbox").checkbox__input#checkbox-id-2
+													label(for="checkbox-id-2").checkbox__label
+											th компьютерная помощь Брянск
+											td 
+												a(href="#").icon-link
+													i.icon.icon_link
+											td
+												.attendance-mark 23
+													br
+													| 0 р.
+											td
+												.attendance-mark.attendance-mark_up 23 
+													i.icon.attendance__icon
+													|  2
+													br
+													| 0 р.
+											td
+												.attendance-mark.attendance-mark_up 23 
+													i.icon.attendance__icon
+													|  2
+													br
+													| 0 р.
+											td
+												.attendance-mark.attendance-mark_down 23 
+													i.icon.attendance__icon
+													|  2
+													br
+													| 0 р.
+											td 0 р.
+										tr
+											td
+												.checkbox.checkbox_blue
+													input(type="checkbox").checkbox__input#checkbox-id-3
+													label(for="checkbox-id-3").checkbox__label
+											th компьютерная помощь Брянск
+											td 
+												a(href="#").icon-link
+													i.icon.icon_link
+											td
+												.attendance-mark 23
+													br
+													| 0 р.
+											td
+												.attendance-mark.attendance-mark_up 23 
+													i.icon.attendance__icon
+													|  2
+													br
+													| 0 р.
+											td
+												.attendance-mark.attendance-mark_up 23 
+													i.icon.attendance__icon
+													|  2
+													br
+													| 0 р.
+											td
+												.attendance-mark.attendance-mark_down 23 
+													i.icon.attendance__icon
+													|  2
+													br
+													| 0 р.
+											td 0 р.
+										tr
+											td
+												.checkbox.checkbox_blue
+													input(type="checkbox").checkbox__input#checkbox-id-4
+													label(for="checkbox-id-4").checkbox__label
+											th компьютерная помощь Брянск
+											td 
+												a(href="#").icon-link
+													i.icon.icon_link
+											td
+												.attendance-mark 23
+													br
+													| 0 р.
+											td
+												.attendance-mark.attendance-mark_up 23 
+													i.icon.attendance__icon
+													|  2
+													br
+													| 0 р.
+											td
+												.attendance-mark.attendance-mark_up 23 
+													i.icon.attendance__icon
+													|  2
+													br
+													| 0 р.
+											td
+												.attendance-mark.attendance-mark_down 23 
+													i.icon.attendance__icon
+													|  2
+													br
+													| 0 р.
+											td 0 р.
+										tr
+											td
+												.checkbox.checkbox_blue
+													input(type="checkbox").checkbox__input#checkbox-id-5
+													label(for="checkbox-id-5").checkbox__label
+											th компьютерная помощь Брянск
+											td 
+												a(href="#").icon-link
+													i.icon.icon_link
+											td
+												.attendance-mark 23
+													br
+													| 0 р.
+											td
+												.attendance-mark.attendance-mark_up 23 
+													i.icon.attendance__icon
+													|  2
+													br
+													| 0 р.
+											td
+												.attendance-mark.attendance-mark_up 23 
+													i.icon.attendance__icon
+													|  2
+													br
+													| 0 р.
+											td
+												.attendance-mark.attendance-mark_down 23 
+													i.icon.attendance__icon
+													|  2
+													br
+													| 0 р.
+											td 0 р.
+										tr
+											td
+												.checkbox.checkbox_blue
+													input(type="checkbox").checkbox__input#checkbox-id-6
+													label(for="checkbox-id-6").checkbox__label
+											th компьютерная помощь Брянск
+											td 
+												a(href="#").icon-link
+													i.icon.icon_link
+											td
+												.attendance-mark 23
+													br
+													| 0 р.
+											td
+												.attendance-mark.attendance-mark_up.attendance-mark_good 23 
+													i.icon.attendance__icon
+													|  2
+													br
+													| 0 р.
+											td
+												.attendance-mark.attendance-mark_up.attendance-mark_bad 23 
+													i.icon.attendance__icon
+													|  2
+													br
+													| 0 р.
+											td
+												.attendance-mark.attendance-mark_down 23 
+													i.icon.attendance__icon
+													|  2
+													br
+													| 0 р.
+											td 0 р.
+										tr
+											td
+												.checkbox.checkbox_blue
+													input(type="checkbox").checkbox__input#checkbox-id-7
+													label(for="checkbox-id-7").checkbox__label
+											th компьютерная помощь Брянск
+											td 
+												a(href="#").icon-link
+													i.icon.icon_link
+											td
+												.attendance-mark 23
+													br
+													| 0 р.
+											td
+												.attendance-mark.attendance-mark_up 23 
+													i.icon.attendance__icon
+													|  2
+													br
+													| 0 р.
+											td
+												.attendance-mark.attendance-mark_up 23 
+													i.icon.attendance__icon
+													|  2
+													br
+													| 0 р.
+											td
+												.attendance-mark.attendance-mark_down 23 
+													i.icon.attendance__icon
+													|  2
+													br
+													| 0 р.
+											td 0 р.
 
-					.block.block_blue
-						p Напомним, что мы настоятельно не рекомендуем точечно влиять на ранжирование поисковых систем по мем или иным запросам. <br>Просьба ознакомиться с лицензиями поисковых систем:
-					.row
-						.col-6
-							h3 Справка Google
-							.block.block_gray
-								p Чтобы показать заказчику эскизы, нужно где-то найти тексты и картинки. Как правило, ни того, ни другого в момент показа эскизов у дизайнера нету. Что же делает дизайнер? Рыбу. 
-								p Рыбу можно вставлять, использовать, вешать, заливать, показывать, запихивать...
-								
-								a(href="#") Читать полностью
-							img(src="media/img/ya.png", alt="")
-						.col-6
-							h3 Справка Google
-							.block.block_gray
-								p Чтобы показать заказчику эскизы, нужно где-то найти тексты и картинки. Как правило, ни того, ни другого в момент показа эскизов у дизайнера нету. Что же делает дизайнер? Рыбу. 
-								p Рыбу можно вставлять, использовать, вешать, заливать, показывать, запихивать...
-								
-								a(href="#") Читать полностью
-							img(src="media/img/google.png", alt="")
+									
+								.total Всего:
+									span.total__num  0р.
+
+						.block.block_border-blue.attendance__block
+							p Напомним, что мы настоятельно не рекомендуем точечно влиять на ранжирование поисковых систем по мем или иным запросам. <br>Просьба ознакомиться с лицензиями поисковых систем:
+							.row
+								.col-6
+									h3 Лицензия Яндекса
+									.block.block_gray
+										p Чтобы показать заказчику эскизы, нужно где-то найти тексты и картинки. Как правило, ни того, ни другого в момент показа эскизов у дизайнера нету. Что же делает дизайнер? Рыбу. 
+										p Рыбу можно вставлять, использовать, вешать, заливать, показывать, запихивать...
+										
+										a(href="#").link Читать полностью
+									img(src="media/img/ya.png", alt="")
+								.col-6
+									h3 Справка Google
+									.block.block_gray
+										p Чтобы показать заказчику эскизы, нужно где-то найти тексты и картинки. Как правило, ни того, ни другого в момент показа эскизов у дизайнера нету. Что же делает дизайнер? Рыбу. 
+										p Рыбу можно вставлять, использовать, вешать, заливать, показывать, запихивать...
+										
+										a(href="#").link Читать полностью
+									img(src="media/img/google.png", alt="")
 				.tab#tab-item-3
 					p Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Меня не, рукописи на берегу города родного путь. То, взгляд за.
 	// END CONTENT

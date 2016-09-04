@@ -74,6 +74,14 @@ body
 		+sprite($s-down)
 	&_ya
 		+sprite($s-ya)
+	&_question
+		+sprite($s-question)
+	&_question_h
+		+sprite($s-question_h)
+	&_link
+		+sprite($s-link)
+	&_link_h
+		+sprite($s-link_h)
 /* end icon */
 
 .selectize-input
@@ -108,6 +116,8 @@ body
 					border-right: 2px solid $c8
 					+transform(rotate(-135deg) translateY(-50%))
 					+size(7px)
+
+
 
 .btn
 	border: 1px solid rgba($c7,.4)
@@ -318,6 +328,52 @@ body
 		width: 32%
 		.selectize-input
 			height: 50px
+			font-size: 35px
+			color: $c4
+			padding: 13px 0 0 20px
+			.item
+				position: relative
+				padding-left: 40px
+				&:before
+					content: ''
+					position: absolute
+					left: 0
+					top: 0
+					+size(21px 25px)
+				&[data-stat=true]
+					&:before
+						background-image: url(media/img/play.png)
+				&[data-stat=false]
+					&:before
+						background-image: url(media/img/pause.png)
+		.selectize-control
+			&.single
+				.selectize-input
+					&:after
+						right: 20px
+						+size(8px)
+					&.dropdown-active
+						&:after
+							margin-top: -3px
+							right: 13px
+							top: 20px
+							+size(8px)
+		.option
+			position: relative
+			padding: 10px 5px 10px 50px
+			font-size: 16px
+			&:before
+				content: ''
+				position: absolute
+				left: 20px
+				top: 7px
+				+size(21px 25px)
+			&[data-stat=true]
+				&:before
+					background-image: url(media/img/play.png)
+			&[data-stat=false]
+				&:before
+					background-image: url(media/img/pause.png)
 	&__btn
 		display: inline-block
 		margin-left: 4px
@@ -378,6 +434,10 @@ body
 	&_gray
 		background-color: $c3
 		border-radius: 5px
+		border: 1px solid #f0f0f0
+	&_border-blue
+		border: 2px solid $c2
+		border-radius: 3px
 
 
 .attendance-stage
@@ -392,6 +452,7 @@ body
 	font-size: 15px
 	box-sizing: border-box
 	padding: 9px 20px
+
 	&_icon
 		background-image: url(media/img/attendance.png)
 		background-repeat: no-repeat
@@ -401,6 +462,8 @@ body
 		border: 1px solid rgba($c7,.4)
 		border-radius: 3px
 		color: $c8
+	&_white
+		background-color: #fff
 
 .attendance-sort
 	+clearfix
@@ -432,23 +495,126 @@ body
 		float: right
 		width: 30%
 
-.attendance__title
-	margin: 30px 0 15px
-	font-size: 25px
-	@extend %proximasemibold
-	.icon
-		margin-right: 15px
+.attendance
+	&__title
+		margin: 30px 0 15px
+		font-size: 25px
+		@extend %proximasemibold
+		.icon
+			margin-right: 15px
+	&__block
+		padding: 50px
+		p
+			font-size: 15px
+			padding: 15px 0
+			&:first-child
+				padding-top: 0
+		h3
+			font-size: 21px
+			@extend %bold
+		.row
+			margin-top: 40px
+		.col-6
+			padding-left: 15px
+			box-sizing: border-box
+			&:first-child
+				padding-left: 0
+				padding-right: 15px
 
-.tabel-header
-	background-color: $c3
-	border-radius: 5px
-	overflow: hidden
-	td,
+.row
+	+clearfix
+.col-6
+	float: left
+	width: 50%
+
+.link
+	color: $c2
+
+.table-container
+	width: 100%
+	overflow-x: scroll
+	overflow-y: hidden
+.table
+	border-collapse: separate
+	td,th
+		vertical-align: middle
+	td
+		text-align: center
 	th
-		padding: 10px
+		text-align: left
+		min-width: 250px
+	&__total
+		min-width: 80px
+	&__url
+		min-width: 100px
+		span
+			vertical-align: middle
+	&__head
+		tr:first-child
+			td,th
+				background-color: $c3
+				border-top: 1px solid #f0f0f0
+				border-bottom: 1px solid #f0f0f0
+				padding: 10px
+			td:first-child
+				border-radius: 5px 0 0 5px
+				border-left: 1px solid #f0f0f0
+			td:last-child
+				border-radius: 0 5px 5px 0
+				border-right: 1px solid #f0f0f0
 
-th
-	font-size: 16px
+	&__body
+		td,th
+			background-color: #f9f9f9
+			border-top: 1px solid #e1e1e1
+			padding: 10px 15px
+		td:first-child
+			border-left: 1px solid #f0f0f0
+		td:last-child
+			border-right: 1px solid #f0f0f0
+		tr:first-child
+			th,td
+				border-color: #f0f0f0
+			td:first-child
+				border-radius: 5px 0 0 0
+				border-left: 1px solid #f0f0f0
+			td:last-child
+				border-radius: 0 5px 0 0
+				border-right: 1px solid #f0f0f0
+		tr:last-child
+			td,th
+				border-bottom: 1px solid #f0f0f0
+			td:first-child
+				border-radius: 0 0 0 5px
+				border-left: 1px solid #f0f0f0
+			td:last-child
+				border-radius: 0 0 5px 0
+				border-right: 1px solid #f0f0f0
+	&__indent
+		height: 3px
+
+
+.attendance-mark
+	text-align: left
+	padding: 15px 30px
+	border-radius: 3px
+	min-width: 120px
+	text-align: center
+	box-sizing: border-box
+	&_up
+		color: $c10
+		.attendance__icon
+			@extend .icon_up
+	&_down
+		color: $c11
+		.attendance__icon
+			@extend .icon_down
+	&_good
+		background-color: $c12
+	&_bad
+		background-color: $c13
+
+
 
 .checkbox
 	border-left: 5px solid transparent
@@ -459,14 +625,75 @@ th
 		border-color: #728acd
 	&__input
 		display: none
+		&:checked
+			&+ .checkbox__label
+				background-image: url(media/img/check.png)
+				background-repeat: no-repeat
+				background-position: 3px 5px
 	&__label
 		+size(20px)
 		border: 1px solid rgba(#000,.15)
 		display: inline-block
+		vertical-align: middle
 		border-radius: 2px
 		cursor: pointer
+		background-color: #fff
 
 
+
+.question
+	display: inline-block
+	margin-left: 10px
+	vertical-align: middle
+	position: relative
+	&__link
+		display: block
+		&:hover
+			.icon_question
+				@extend .icon_question_h
+	&__tooltip
+		display: none
+		position: absolute
+		top: -5px
+		left: 100%
+		background-color: #fff
+		border-radius: 5px
+		border: 1px solid $c7
+		margin-left: 5px
+		width: 150px
+		color: $c7
+		font-size: 13px
+		box-sizing: border-box
+		padding: 8px 10px
+		text-align: left
+		&:after
+			content: ''
+			position: absolute
+			top: 10px
+			left: -5px
+			+size(7px)
+			+transform(rotate(45deg))
+			border-bottom: 1px solid $c7
+			border-left: 1px solid $c7
+			background-color: #fff
+
+
+.table-wraper
+	display: table
+
+.total
+	width: 100%
+	padding: 10px 0
+	text-align: right
+	font-size: 25px
+	&__num
+		font-size: 36px
+		color: #c1c1c1
+
+.icon-link
+	&:hover
+		.icon_link
+			@extend .icon_link_h
 
 
 
