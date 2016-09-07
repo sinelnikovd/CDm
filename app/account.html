@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Настройка аккаунта</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" href="_main.min.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" href="media/favicon/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="media/favicon/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="media/favicon/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="media/favicon/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="media/favicon/apple-touch-icon-114x114.png">
+  </head>
+  <body>
+    <div class="page">
+      <!-- BEGIN HEADER-->
+      <header class="header">
+        <div class="container">
+          <div class="top-line">
+            <div class="top-line__logo">
+              <div class="logo"><a href="#" class="logo__link"><img src="media/img/logo.png" alt="" class="logo__img"></a></div>
+            </div>
+            <div class="top-line__call">
+              <div class="call"><a href="tel:" class="call__link">+7 (4832) 68-18-80</a>
+                <div class="call__worktime">по будням с 9:00 до 18:00</div>
+              </div>
+            </div>
+            <div class="top-line__firm">
+              <div class="firm">
+                <div class="firm__select">
+                  <select name="firm" id="select_firm" class="select select_small">
+                    <option value="ООО мирСк">ООО мирСк</option>
+                    <option value="ООО мирСк1">ООО мирСк1</option>
+                    <option value="ООО мирСк2">ООО мирСк2</option>
+                    <option value="ООО мирСк3">ООО мирСк3</option>
+                  </select>
+                </div><a href="#" class="btn btn_icon-small"><i class="icon icon_plus btn__icon"></i></a>
+              </div>
+            </div>
+            <div class="top-line__account">
+              <div class="account">
+                <div class="account__back"></div>
+                <div class="account__control">
+                  <div class="account__name"><i class="icon icon_person account__name-icon"></i>Елена</div>
+                  <div class="account__dropdown">
+                    <hr class="account__hr"><a href="#" class="account__link"><i class="icon icon_settings account__icon"></i>Настройка аккаунта</a><a href="#" class="account__link"><i class="icon icon_close account__icon"></i>Выйти</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <nav class="nav">
+          <div class="container">
+            <ul class="nav__list">
+              <li class="nav__item active"><a href="#" class="nav__link">Статистика</a></li>
+              <li class="nav__item"><a href="#" class="nav__link">Ход работы</a></li>
+              <li class="nav__item"><a href="#" class="nav__link">Поддержка</a></li>
+              <li class="nav__item"><a href="#" class="nav__link">Менеджеры</a></li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <!-- END HEADER-->
+      <!-- BEGIN COMPANY-LINE-->
+      <div class="company-line">
+        <div class="container">
+          <div class="company-line__select">
+            <select name="company" id="select_company" class="select select_big">
+              <option value="itc-media.ru" data-data="{&quot;stat&quot;:true}">itc-media.ru</option>
+              <option value="itc-media.ru1" data-data="{&quot;stat&quot;:true}">itc-media.ru</option>
+              <option value="itc-media.ru2" data-data="{&quot;stat&quot;:false}">itc-media.ru</option>
+              <option value="itc-media.ru3" data-data="{&quot;stat&quot;:true}">itc-media.ru</option>
+            </select>
+          </div>
+          <div class="company-line__btn"><a href="#" class="btn btn_icon btn_icon-big"><i class="icon icon_pen btn__icon"></i></a></div>
+          <div class="company-line__btn"><a href="#" class="btn btn_icon btn_icon-big btn_icon-red"><i class="icon icon_del btn__icon"></i></a></div>
+          <div class="company-line__add-site"><a href="#" class="add-site"><i class="icon icon_plus1 add-site__icon"></i>Добавить сайт</a></div>
+        </div>
+      </div>
+      <!-- END COMPANY-LINE-->
+      <!-- BEGIN CONTENT-->
+      <div class="container">
+        <div class="content">
+          <div class="content__title">Настройка аккаунта</div>
+          <div class="tab-container">
+            <ul class="tab-nav">
+              <li class="tab-nav__item tab-nav__item_green"><a href="#tab-item-1" class="tab-nav__link">Личные данные</a></li>
+              <li class="tab-nav__item tab-nav__item_green"><a href="#tab-item-2" class="tab-nav__link">Пароль</a></li>
+              <li class="tab-nav__item tab-nav__item_orange"><a href="#tab-item-3" class="tab-nav__link">Управление</a></li>
+            </ul>
+            <div id="tab-item-1" class="tab">
+              <form action="/" class="form">
+                <div class="form__line">
+                  <label for="name" class="label">Название организации</label>
+                  <input id="name" type="text" name="Физическое лицо" class="input static-data__input">
+                  <div class="static-data">Физическое лицо</div><a href="#" class="btn btn_border static-data__btn">Изменить</a>
+                </div>
+                <div class="form__line">
+                  <div class="label">E-mail</div>
+                  <div class="static-data">info@itc-media.ru</div>
+                </div>
+                <div class="form__line">
+                  <label for="name" class="label">Ваше имя</label>
+                  <input id="name" type="text" class="input">
+                </div>
+                <div class="form__line">
+                  <label for="phone" class="label">Контактный телефон</label>
+                  <input id="phone" type="tel" class="input">
+                </div>
+                <div class="form__line">
+                  <label for="position" class="label">Должность</label>
+                  <input id="position" type="text" class="input">
+                </div>
+                <div class="form__line form__line_top">
+                  <button type="submit" class="btn btn_orange">Сохранить</button>
+                        <div class="alert-inline alert-inline_success">Изменения сохранены
+                        </div>
+                        <div class="alert-inline alert-inline_error">Изменения не сохранены
+                        </div>
+                </div>
+              </form>
+            </div>
+            <div id="tab-item-2" class="tab">
+              <form action="/" class="form">
+                <div class="form__line">
+                  <label for="name" class="label">Старый пароль</label>
+                  <input id="name" type="password" class="input">
+                </div>
+                <div class="form__line">
+                  <label for="phone" class="label">Новый пароль</label>
+                  <input id="phone" type="password" class="input">
+                </div>
+                <div class="form__line">
+                  <button type="submit" class="btn btn_orange">Сохранить</button>
+                        <div class="alert-inline alert-inline_success">Изменения сохранены
+                        </div>
+                        <div class="alert-inline alert-inline_error">Изменения не сохранены
+                        </div>
+                </div>
+              </form>
+            </div>
+            <div id="tab-item-3" class="tab">
+              <ul class="manager-list">
+                <li class="manager-list__item">
+                  <div class="manager">
+                    <div class="manager__img"></div>
+                    <div class="manager__name">Семен Фролов</div>
+                    <div class="manager__position">главный менеджер</div>
+                    <div class="manager__btn-group"><a href="#" class="btn btn_icon btn_icon-big"><i class="icon icon_pen btn__icon"></i></a><a href="#" class="btn btn_icon btn_icon-big btn_icon-red"><i class="icon icon_del btn__icon"></i></a></div>
+                  </div>
+                </li>
+                <li class="manager-list__item">
+                  <div class="manager manager_add">
+                    <div class="manager__img"></div>
+                    <div class="manager__name">Добавить менеджера</div>
+                    <div class="manager__btn-group"><a href="#" class="btn btn_icon btn_icon-big"><i class="icon icon_plus2 btn__icon"></i></a></div>
+                  </div>
+                </li>
+              </ul>
+              <form action="/" class="form">
+                <div class="block block_border-gray">
+                  <div class="form__title">Схема оплаты:</div>
+                  <div class="form__line">
+                    <div class="radio">
+                      <input id="radio1" type="radio" name="radio1" class="radio__input">
+                      <label for="radio1" class="radio__label"><span class="radio__dot"></span>Абонентская плата</label>
+                    </div>
+                    <div class="radio">
+                      <input id="radio2" type="radio" name="radio1" class="radio__input">
+                      <label for="radio2" class="radio__label"><span class="radio__dot"></span>Позиции</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="form__title">Сменить пароль</div>
+                <div class="form__line">
+                  <label for="phone" class="label">Задать новый пароль</label>
+                  <input id="phone" type="password" class="input">
+                </div>
+                <div class="form__line form__line_no-margin">
+                  <div class="radio radio_inline">
+                    <input id="radio3" type="radio" name="radio2" class="radio__input">
+                    <label for="radio3" class="radio__label"><span class="radio__dot"></span>Активен</label>
+                  </div>
+                  <div class="radio radio_inline">
+                    <input id="radio4" type="radio" name="radio2" class="radio__input">
+                    <label for="radio4" class="radio__label"><span class="radio__dot"></span>Неактивен</label>
+                  </div>
+                </div>
+                <div class="form__line">
+                  <button type="submit" class="btn btn_orange">Сохранить</button>
+                        <div class="alert-inline alert-inline_success">Изменения сохранены
+                        </div>
+                        <div class="alert-inline alert-inline_error">Изменения не сохранены
+                        </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END CONTENT-->
+    </div>
+    <!-- BEGIN FOOTER-->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__block">
+          <p>©2016 СRM<br><a href="#" class="footer__link">Условия использования</a></p>
+        </div>
+        <div class="footer__block">
+          <p> <a href="tel:8 800 700-87-31" class="footer__link footer__link_noline">8 800 700-87-31 </a><br><a href="#" class="footer__link">Обратный звонок</a></p>
+        </div>
+        <div class="footer__block">
+          <p><a href="mailto:support@CRM.ru" class="footer__link footer__link_noline">support@CRM.ru</a></p>
+        </div>
+      </div>
+    </footer>
+    <!-- END FOOTER-->
+    <div class="hidden">
+    </div><!--[if lt IE 9]>
+    <script src="libs/html5shiv/es5-shim.min.js"></script>
+    <script src="libs/html5shiv/html5shiv.min.js"></script>
+    <script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>
+    <script src="libs/respond/respond.min.js"></script><![endif]-->
+    <script src="libs/modernizr/modernizr.js"></script>
+    <script src="libs/jquery/jquery-3.1.0.min.js"></script>
+    <script src="libs/inputmask/inputmask.js"></script>
+    <script src="libs/selectize/selectize.min.js"></script>
+    <script src="libs/easytabs/jquery.easytabs.min.js"></script>
+    <script src="libs/tooltipster/tooltipster.bundle.min.js"></script>
+    <script src="libs/moment/moment.min.js"></script>
+    <script src="libs/daterangepicker/jquery.daterangepicker.min.js"></script>
+    <script src="js/common.js"></script>
+  </body>
+</html>

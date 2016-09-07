@@ -1,0 +1,19 @@
+extends ../base/base.jade
+
+
+block title
+	title Статистика
+
+block base-content
+	include ../base/mixins/alert-inline.jade
+	include ../blocks/header.jade
+
+	include ../blocks/company-line.jade
+
+	// BEGIN CONTENT
+	.container
+		.content
+			.content__title
+				block content-title
+			block content
+	// END CONTENT

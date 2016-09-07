@@ -1,0 +1,43 @@
+.manager-list
+	margin: 30px -10px
+	+clearfix
+	&__item
+		float: left
+		width: 25%
+		padding: 0 10px
+		box-sizing: border-box
+.manager
+	padding: 25px 0 10px
+	border: 1px solid #c6c6c6
+	text-align: center
+	border-radius: 5px
+	&:hover
+		background-color: $c3
+	&_add
+		.manager__img
+			background-image: url(media/img/manage_add.png)
+			+size(82px)
+		.manager__btn-group
+			margin: 15px 0
+		.manager__name
+			font-size: 17px
+	.btn
+		margin: 0 3px
+	&__name
+		margin-top: 18px
+		font-size: 20px
+		color: #000
+	&__position
+		font-size: 15px
+		color: #929292
+	&__img
+		display: inline-block
+		+size(96px)
+		border: 1px solid #e2e2e2
+		border-radius: 50%
+		background-image: url(media/images/person.jpg)
+		background-position: 50% 50%
+		background-repeat: no-repeat
+		background-size: cover
+	&__btn-group
+		margin: 35px 0

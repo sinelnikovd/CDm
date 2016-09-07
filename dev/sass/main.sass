@@ -5,6 +5,8 @@
 @import "basic/vars/font-size.sass"
 @import "basic/vars/color.sass"
 @import "libs/selectize.sass"
+@import "libs/tooltipster.sass"
+@import "libs/daterangepicker.sass"
 //---addSmartScript---//
 
 *::-webkit-input-placeholder
@@ -24,6 +26,9 @@
 	color: #424242
 	opacity: 1
 
+*
+	outline: none
+
 body input:focus:required:invalid,
 body textarea:focus:required:invalid
 	color: #424242
@@ -32,6 +37,9 @@ body input:required:valid,
 body textarea:required:valid
 	color: #424242
 
+html
+	height: 100%
+
 body
 	font-size: 15px
 	min-width: 1200px
@@ -39,50 +47,29 @@ body
 	line-height: 1.24
 	@extend %regural
 	font-weight: normal
-	overflow-x: hidden
 	color: $c1
 	background-color: $c3
+	height: 100%
 
 .container
 	width: 1165px
 	padding: 0 15px
 	margin: 0 auto
 
-/* icon */
-.icon
-	display: inline-block
-	vertical-align: middle
-	&_plus
-		+sprite($s-plus)
-	&_settings
-		+sprite($s-settings)
-	&_settings_h
-		+sprite($s-settings_h)
-	&_close
-		+sprite($s-close)
-	&_close_h
-		+sprite($s-close_h)
-	&_pen
-		+sprite($s-pen)
-	&_del
-		+sprite($s-del)
-	&_plus1
-		+sprite($s-plus1)
-	&_up
-		+sprite($s-up)
-	&_down
-		+sprite($s-down)
-	&_ya
-		+sprite($s-ya)
-	&_question
-		+sprite($s-question)
-	&_question_h
-		+sprite($s-question_h)
-	&_link
-		+sprite($s-link)
-	&_link_h
-		+sprite($s-link_h)
-/* end icon */
+.page
+	min-height: 100%
+	height: auto
+	padding-bottom: 90px
+	box-sizing: border-box
+
+
+@import "helpers/icon.sass"
+@import "helpers/form.sass"
+@import "blocks/header.sass"
+@import "blocks/company-line.sass"
+@import "blocks/alert.sass"
+@import "blocks/manager.sass"
+@import "blocks/footer.sass"
 
 .selectize-input
 	border: 1px solid rgba($c7,.4)
@@ -127,12 +114,29 @@ body
 	vertical-align: middle
 	position: relative
 	text-align: center
-	&:hover
-		border-color: $c2
-	&_icon-small
-		+size(37px)
-	&_icon-big
-		+size(47px)
+	text-decoration: none
+	&_icon
+		&:hover
+			border-color: $c2
+		&-small
+			+size(37px)
+		&-big
+			+size(47px)
+		&-red
+			&:hover
+				border-color: $c11
+
+	&_orange
+		height: 47px
+		background-color: $c14
+		padding: 0 40px
+		color: #fff
+		font-size: 17px
+	&_border
+		padding: 10px 15px
+		color: $c9
+		&:hover
+			border-color: $c2
 	&__icon
 		position: absolute
 		top: 0
@@ -142,259 +146,14 @@ body
 		margin: auto
 
 
-.logo
-	&__link
-		display: block
-
-.call
-	color: $c5
-	padding-left: 12px
-	&__link
-		font-size: 24px
-		line-height: 1
-		color: $c4
-		text-decoration: none
-	&__worktime
-		margin-top: 2px
-
-.firm
-	&__select
-		@extend %circe
-		font-size: 14px
-		color: $c8
-		width: 197px
-		display: inline-block
-		vertical-align: top
-		margin-right: 5px
-		.selectize-input
-			height: 39px
-			padding-top: 10px
-	.btn
-		vertical-align: top
-
-.account
-	width: 244px
-	text-align: left
-	position: relative
-	&__name
-		height: 53px
-		border: 1px solid rgba($c7,.4)
-		border-radius: 3px
-		background-image: url(media/img/person.jpg)
-		background-repeat: no-repeat
-		background-position: 10px 13px
-		padding: 17px 10px 10px 53px
-		box-sizing: border-box
-		@extend %proximabold
-		font-size: 16px
-		cursor: pointer
-		&:hover
-			border-color: $c2
-	&__dropdown
-		display: none
-		position: absolute
-		top: 100%
-		left: 0
-		right: 0
-		z-index: 20
-		border-left: 2px solid $c2
-		border-right: 2px solid $c2
-		border-bottom: 2px solid $c2
-		padding: 0 10px 15px
-		border-radius: 0 0 5px 5px
-		background-color: #fff
-	&__link
-		padding: 15px 0 0
-		display: block
-		color: $c9
-		text-decoration: none
-		&:hover
-			color: $c2
-			.icon_settings
-				@extend .icon_settings_h
-			.icon_close
-				@extend .icon_close_h
-	&__icon
-		margin-right: 20px
-	&__hr
-		margin: 0
-		border: 0
-		border-bottom: 1px solid rgba($c7,.4)
-	&__back
-		display: none
-		position: fixed
-		top: 0
-		bottom: 0
-		left: 0
-		right: 0
-		z-index: 18
-		cursor: pointer
-	&:hover
-		border-color: $c2
-	&.active
-		.account__name
-			background-color: #fff
-			border-color: $c2
-			border-width: 2px
-			border-bottom: 0
-			border-radius: 5px 5px 0 0
-		.account__dropdown
-			display: block
-		.account__back
-			display: block
-
-.top-line
-	padding: 35px 0 0
-	+clearfix
-	&__logo
-		float: left
-		width: 21.5%
-	&__call
-		float: left
-		width: 20.5%
-		border-left: 1px solid $c2
-	&__firm
-		float: left
-		width: 30%
-		padding-top: 2px
-	&__account
-		float: right
-
-.nav
-	margin-top: 10px
-	border-bottom: 1px solid rgba($c7,.4)
-	font-size: 0
-	&__item
-		display: inline-block
-		margin-bottom: -1px
-		&.active
-			.nav__link
-				border-bottom: 3px solid $c2
-				color: $c2
-				padding-bottom: 9px
-			&:hover
-				.nav__link
-					border-bottom: 3px solid $c2
-					color: $c2
-					padding-bottom: 9px
-		&:hover
-			.nav__link
-				color: $c2
-				border-bottom: 1px solid $c2
-	&__link
-		display: block
-		padding: 11px 40px
-		font-size: 18px
-		color: $c9
-		text-decoration: none
-		box-sizing: border-box
-
-
-.footer
-	color: $c6
-	font-size: 13px
-	padding: 28px 0
-	&__block
-		display: inline-block
-		padding-left: 30px
-		padding-right: 25px
-		vertical-align: top
-		position: relative
-		&:after
-			content: ''
-			position: absolute
-			top: 0
-			left: 0
-			+size(1px 40px)
-			background-color: $c6
-		&:first-child
-			padding-left: 0
-			&:after
-				display: none
-	&__link
-		color: $c6
-		&:hover,
-		&_noline
-			text-decoration: none
 
 
 
 
 
-.company-line
-	padding: 30px 0 15px
-	&__select
-		display: inline-block
-		width: 32%
-		.selectize-input
-			height: 50px
-			font-size: 35px
-			color: $c4
-			padding: 13px 0 0 20px
-			.item
-				position: relative
-				padding-left: 40px
-				&:before
-					content: ''
-					position: absolute
-					left: 0
-					top: 0
-					+size(21px 25px)
-				&[data-stat=true]
-					&:before
-						background-image: url(media/img/play.png)
-				&[data-stat=false]
-					&:before
-						background-image: url(media/img/pause.png)
-		.selectize-control
-			&.single
-				.selectize-input
-					&:after
-						right: 20px
-						+size(8px)
-					&.dropdown-active
-						&:after
-							margin-top: -3px
-							right: 13px
-							top: 20px
-							+size(8px)
-		.option
-			position: relative
-			padding: 10px 5px 10px 50px
-			font-size: 16px
-			&:before
-				content: ''
-				position: absolute
-				left: 20px
-				top: 7px
-				+size(21px 25px)
-			&[data-stat=true]
-				&:before
-					background-image: url(media/img/play.png)
-			&[data-stat=false]
-				&:before
-					background-image: url(media/img/pause.png)
-	&__btn
-		display: inline-block
-		margin-left: 4px
-		vertical-align: top
-		.btn
-			vertical-align: top
-	&__add-site
-		vertical-align: top
-		display: inline-block
-		margin-left: 20px
-.add-site
-	vertical-align: middle
-	font-size: 17px
-	text-decoration: none
-	color: $c4
-	display: block
-	padding: 18px 50px
-	&:hover
-		color: $c2
-	&__icon
-		margin-right: 15px
+
+
+
 
 
 .content
@@ -416,6 +175,9 @@ body
 		&_green
 			.tab-nav__link
 				border-color: $c10
+		&_orange
+			.tab-nav__link
+				border-color: $c14
 	&__link
 		font-size: 17px
 		color: $c1
@@ -428,6 +190,9 @@ body
 			border-style: solid
 			padding-bottom: 9px
 
+.tab
+	padding: 20px 0 30px
+
 .block
 	margin: 20px 0
 	padding: 15px 15px
@@ -435,9 +200,14 @@ body
 		background-color: $c3
 		border-radius: 5px
 		border: 1px solid #f0f0f0
-	&_border-blue
-		border: 2px solid $c2
-		border-radius: 3px
+	&_border
+		&-blue
+			border: 2px solid $c2
+			border-radius: 3px
+		&-gray
+			border: 1px solid #c6c6c6
+			border-radius: 5px
+
 
 
 .attendance-stage
@@ -464,6 +234,8 @@ body
 		color: $c8
 	&_white
 		background-color: #fff
+	&.datetimepiker
+		min-width: 300px
 
 .attendance-sort
 	+clearfix
@@ -484,6 +256,10 @@ body
 			border-radius: 3px 0 0 3px
 		&:last-child
 			border-radius: 0 3px 3px 0
+		&:hover,
+		&.active
+			background-color: $c3
+			color: $c4
 	&__num
 		position: absolute
 		top: 125%
@@ -491,9 +267,15 @@ body
 		right: 0
 		text-align: center
 		color: $c6
+		font-size: 14px
 	&__select
 		float: right
 		width: 30%
+		.icon
+			vertical-align: middle
+			margin-right: 10px
+		.val
+			vertical-align: middle
 
 .attendance
 	&__title
@@ -564,6 +346,10 @@ body
 				border-right: 1px solid #f0f0f0
 
 	&__body
+		tr
+			&:hover
+				td,th
+					background-color: #d7ecfa
 		td,th
 			background-color: #f9f9f9
 			border-top: 1px solid #e1e1e1
@@ -696,6 +482,46 @@ body
 			@extend .icon_link_h
 
 
+.tooltipster-sidetip.tooltipster-customized
+	.tooltipster-box
+		background-color: #fff
+		border-radius: 5px
+		border: 1px solid $c7
+	.tooltipster-content
+		padding: 8px 10px
+		color: $c7
+		font-size: 13px
+	.tooltipster-arrow
+		height: 10px
+		margin-left: -10px
+		width: 22px
+	&.tooltipster-left .tooltipster-arrow,
+	&.tooltipster-right .tooltipster-arrow
+		height: 20px
+		margin-left: 0
+		margin-top: -10px
+		width: 11px
+	.tooltipster-arrow-background
+		border: 11px solid transparent
+	&.tooltipster-bottom .tooltipster-arrow-background
+		border-bottom-color: #fff
+		top: 1px
+	&.tooltipster-left .tooltipster-arrow-background
+		border-left-color: #fff
+		left: -1px
+	&.tooltipster-right .tooltipster-arrow-background
+		border-right-color: #fff
+		left: 1px
+	&.tooltipster-top .tooltipster-arrow-background
+		border-top-color: #fff
+		top: -1px
+	.tooltipster-arrow-border
+		border-top-color: $c7
+		border-width: 11px
+	&.tooltipster-bottom .tooltipster-arrow-uncropped
+		top: -10px
+	&.tooltipster-right .tooltipster-arrow-uncropped
+		left: -10px
 
 //ALWAYS END
-@import "basic/_media.sass"
+//@import "basic/_media.sass"

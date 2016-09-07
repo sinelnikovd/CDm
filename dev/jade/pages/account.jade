@@ -1,0 +1,110 @@
+extends ../base/content.jade
+
+block title
+	title Настройка аккаунта
+
+block content-title
+	| Настройка аккаунта
+
+block content
+	.tab-container
+		ul.tab-nav
+			li.tab-nav__item.tab-nav__item_green
+				a(href="#tab-item-1").tab-nav__link Личные данные
+			li.tab-nav__item.tab-nav__item_green
+				a(href="#tab-item-2").tab-nav__link Пароль
+			li.tab-nav__item.tab-nav__item_orange
+				a(href="#tab-item-3").tab-nav__link Управление
+		.tab#tab-item-1
+			form(action="/").form
+				.form__line
+					label(for="name").label Название организации
+					input#name(type="text" name="Физическое лицо").input.static-data__input
+					.static-data Физическое лицо
+					//-TODO Сделать добавления инпута по клику
+					a(href="#").btn.btn_border.static-data__btn Изменить
+				.form__line
+					.label E-mail
+					.static-data info@itc-media.ru
+				.form__line
+					label(for="name").label Ваше имя
+					input#name(type="text").input
+				.form__line
+					label(for="phone").label Контактный телефон
+					input#phone(type="tel").input
+				.form__line
+					label(for="position").label Должность
+					input#position(type="text").input
+				.form__line.form__line_top
+					button(type="submit").btn.btn_orange Сохранить
+					+alert-inline()(class="success") Изменения сохранены
+					+alert-inline()(class="error") Изменения не сохранены
+		.tab#tab-item-2
+			form(action="/").form
+				.form__line
+					label(for="name").label Старый пароль
+					input#name(type="password").input
+				.form__line
+					label(for="phone").label Новый пароль
+					input#phone(type="password").input
+				.form__line
+					button(type="submit").btn.btn_orange Сохранить
+					+alert-inline()(class="success") Изменения сохранены
+					+alert-inline()(class="error") Изменения не сохранены
+		.tab#tab-item-3
+			ul.manager-list
+				li.manager-list__item
+					.manager
+						.manager__img
+						.manager__name Семен Фролов
+						.manager__position главный менеджер
+						.manager__btn-group
+								a(href="#").btn.btn_icon.btn_icon-big
+									i.icon.icon_pen.btn__icon
+								a(href="#").btn.btn_icon.btn_icon-big.btn_icon-red
+									i.icon.icon_del.btn__icon
+				li.manager-list__item
+					.manager.manager_add
+						.manager__img
+						.manager__name Добавить менеджера
+						.manager__btn-group
+								a(href="#").btn.btn_icon.btn_icon-big
+									i.icon.icon_plus2.btn__icon
+			form(action="/").form
+				.block.block_border-gray
+					.form__title Схема оплаты:
+					.form__line
+						.radio
+							input#radio1(type="radio" name="radio1").radio__input
+							label(for="radio1").radio__label
+								span.radio__dot
+								| Абонентская плата
+						.radio
+							input#radio2(type="radio" name="radio1").radio__input
+							label(for="radio2").radio__label
+								span.radio__dot
+								| Позиции
+
+
+				.form__title Сменить пароль
+				.form__line
+					label(for="phone").label Задать новый пароль
+					input#phone(type="password").input
+				.form__line.form__line_no-margin
+					.radio.radio_inline
+						input#radio3(type="radio" name="radio2").radio__input
+						label(for="radio3").radio__label
+							span.radio__dot
+							| Активен
+					.radio.radio_inline
+						input#radio4(type="radio" name="radio2").radio__input
+						label(for="radio4").radio__label
+							span.radio__dot
+							| Неактивен
+				.form__line
+					button(type="submit").btn.btn_orange Сохранить
+					+alert-inline()(class="success") Изменения сохранены
+					+alert-inline()(class="error") Изменения не сохранены
+
+block popup
+	//-TODO всплывающие окно

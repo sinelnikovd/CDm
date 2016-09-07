@@ -1,0 +1,91 @@
+.account
+	width: 244px
+	text-align: left
+	position: relative
+	&__control
+		border: 1px solid rgba($c7,.4)
+		border-radius: 3px
+		&:hover
+			border-color: $c2
+	&__name
+		height: 53px
+		padding: 17px 10px 10px 53px
+		box-sizing: border-box
+		@extend %proximabold
+		font-size: 16px
+		cursor: pointer
+		position: relative
+		&:after
+			content: ''
+			position: absolute
+			right: 20px
+			top: 20px
+			border-bottom: 2px solid $c8
+			border-right: 2px solid $c8
+			+transform(rotate(45deg))
+			+transition(all .3s ease-in-out)
+			+size(7px)
+		&-icon
+			position: absolute
+			left: 10px
+			top: 10px
+	&__dropdown
+		display: none
+		position: absolute
+		top: 100%
+		left: 0
+		right: 0
+		z-index: 20
+		border-left: 2px solid $c2
+		border-right: 2px solid $c2
+		border-bottom: 2px solid $c2
+		padding: 0 10px 15px
+		border-radius: 0 0 5px 5px
+		background-color: #fff
+	&__link
+		padding: 15px 0 0
+		display: block
+		color: $c9
+		text-decoration: none
+		&:hover
+			color: $c2
+			.icon_settings
+				@extend .icon_settings_h
+			.icon_close
+				@extend .icon_close_h
+	&__icon
+		margin-right: 20px
+	&__hr
+		margin: 0
+		border: 0
+		border-bottom: 1px solid rgba($c7,.4)
+	&__back
+		display: none
+		position: fixed
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+		z-index: 18
+		cursor: pointer
+	&:hover
+		border-color: $c2
+	&.active
+		.account__control
+			border-left: 2px solid $c2
+			border-right: 2px solid $c2
+			border-top: 2px solid $c2
+			border-bottom: 0 none
+			border-radius: 3px 3px 0 0
+			background-color: #fff
+		.account__name
+			padding: 16px 9px 9px 52px
+			&-icon
+				left: 9px
+				top: 9px
+			&:after
+				top: 22px
+				right: 19px
+				+transform(rotate(-135deg))
+		.account__back
+			display: block

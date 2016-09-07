@@ -1,0 +1,75 @@
+.form
+	&__line
+		margin: 12px 0
+		&_top
+			padding-top: 20px
+		&_no-margin
+			margin: 0
+	&__title
+		font-size: 17px
+		@extend %proximabold
+
+.label
+	display: block
+	color: $c9
+	font-size: 15px
+	margin-bottom: 5px
+
+.static-data
+	@extend %semibold
+	font-size: 17px
+	color: #060606
+	display: inline-block
+	padding: 7px 0
+	&__input
+		display: none
+	&__btn
+		margin-left: 20px
+
+.input
+	height: 37px
+	width: 245px
+	font-size: 20px
+	border: 1px solid #cccccc
+	border-radius: 2px
+	padding: 0 10px
+	&:focus
+		border-color: $c2
+
+.radio
+	margin: 8px 0
+	&_inline
+		display: inline-block
+		margin: 3px 15px 3px 0
+	&__input
+		display: none
+		&:checked
+			&+ .radio__label
+				.radio__dot
+					border-color: $c14
+					&:after
+						content: ''
+						position: absolute
+						top: 0
+						bottom: 0
+						left: 0
+						right: 0
+						+size(9px)
+						margin: auto
+						background-color: #090909
+						border-radius: 50%
+
+	&__label
+		cursor: pointer
+		font-size: 16px
+		color: $c9
+		vertical-align: middle
+	&__dot
+		display: inline-block
+		+size(15px)
+		border: 2px solid #878787
+		border-radius: 50%
+		vertical-align: middle
+		margin-right: 10px
+		position: relative
+

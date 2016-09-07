@@ -1,0 +1,29 @@
+.footer
+	margin-top: -90px
+	height: 90px
+	color: $c6
+	font-size: 13px
+	padding: 28px 0
+	box-sizing: border-box
+	&__block
+		display: inline-block
+		padding-left: 30px
+		padding-right: 25px
+		vertical-align: top
+		position: relative
+		&:after
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			+size(1px 40px)
+			background-color: $c6
+		&:first-child
+			padding-left: 0
+			&:after
+				display: none
+	&__link
+		color: $c6
+		&:hover,
+		&_noline
+			text-decoration: none

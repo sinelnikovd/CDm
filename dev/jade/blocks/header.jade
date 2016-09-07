@@ -1,0 +1,49 @@
+// BEGIN HEADER
+header.header
+	.container
+		.top-line
+			.top-line__logo
+				.logo
+					a(href="#").logo__link
+							img(src="media/img/logo.png", alt="").logo__img
+			.top-line__call
+				.call
+					a(href="tel:").call__link +7 (4832) 68-18-80
+					.call__worktime по будням с 9:00 до 18:00
+			.top-line__firm
+				.firm
+					.firm__select
+						select(name="firm").select.select_small#select_firm
+								option(value="ООО мирСк") ООО мирСк
+								option(value="ООО мирСк1") ООО мирСк1
+								option(value="ООО мирСк2") ООО мирСк2
+								option(value="ООО мирСк3") ООО мирСк3
+					a(href="#").btn.btn_icon-small
+						i.icon.icon_plus.btn__icon
+			.top-line__account
+				.account
+					.account__back
+					.account__control
+						.account__name
+							i.icon.icon_person.account__name-icon
+							| Елена
+						.account__dropdown
+							hr.account__hr
+							a(href="#").account__link
+								i.icon.icon_settings.account__icon
+								| Настройка аккаунта
+							a(href="#").account__link
+								i.icon.icon_close.account__icon
+								| Выйти
+	nav.nav
+		.container
+			ul.nav__list
+				li.nav__item.active
+					a(href="#").nav__link Статистика
+				li.nav__item
+					a(href="#").nav__link Ход работы
+				li.nav__item
+					a(href="#").nav__link Поддержка
+				li.nav__item
+					a(href="#").nav__link Менеджеры
+// END HEADER

@@ -1,0 +1,20 @@
+.alert-inline
+	display: inline-block
+	@extend %semibold
+	font-size: 17px
+	color: $c9
+	padding: 0 30px
+	vertical-align: middle
+	&:before
+		content: ''
+		display: inline-block
+		margin-right: 8px
+		vertical-align: middle
+		@extend .icon
+	&_success
+		&:before
+			@extend .icon_success
+	&_error
+		color: $c11
+		&:before
+			@extend .icon_error
