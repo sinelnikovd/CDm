@@ -106,44 +106,7 @@ body
 
 
 
-.btn
-	border: 1px solid rgba($c7,.4)
-	border-radius: 3px
-	cursor: pointer
-	display: inline-block
-	vertical-align: middle
-	position: relative
-	text-align: center
-	text-decoration: none
-	&_icon
-		&:hover
-			border-color: $c2
-		&-small
-			+size(37px)
-		&-big
-			+size(47px)
-		&-red
-			&:hover
-				border-color: $c11
 
-	&_orange
-		height: 47px
-		background-color: $c14
-		padding: 0 40px
-		color: #fff
-		font-size: 17px
-	&_border
-		padding: 10px 15px
-		color: $c9
-		&:hover
-			border-color: $c2
-	&__icon
-		position: absolute
-		top: 0
-		bottom: 0
-		left: 0
-		right: 0
-		margin: auto
 
 
 
@@ -161,8 +124,8 @@ body
 	border-radius: 5px
 	padding: 20px 30px
 	&__title
-		font-size: 25px
-		@extend %proximasemibold
+		font-size: 29px
+		@extend %proximabold
 		line-height: 1.15
 		margin-bottom: 20px
 
@@ -522,6 +485,23 @@ body
 		top: -10px
 	&.tooltipster-right .tooltipster-arrow-uncropped
 		left: -10px
+
+
+@import "pages/support.sass"
+
+.hr
+	margin: 0
+	border: 0
+	border-bottom: 1px solid rgba($c7,.4)
+
+.link-icon
+	display: inline-block
+	padding: 5px
+	vertical-align: middle
+	&__group
+		display: inline-block
+		vertical-align: middle
+		margin-left: 10px
 
 //ALWAYS END
 //@import "basic/_media.sass"

@@ -1,0 +1,52 @@
+extends ../base/content.jade
+
+block title
+	title Менеджеры
+
+block content-title
+	| Менеджеры
+
+block content
+	.tab-container
+		ul.tab-nav
+			li.tab-nav__item.tab-nav__item_orange
+				a(href="#tab-item-1").tab-nav__link Менеджеры
+			li.tab-nav__item.tab-nav__item_orange
+				a(href="#tab-item-2").tab-nav__link Добавить менеджера
+		.tab#tab-item-1
+			ul.manager-list
+				li.manager-list__item
+					include ../blocks/manager.jade
+				li.manager-list__item
+					include ../blocks/manager.jade
+				li.manager-list__item
+					include ../blocks/manager.jade
+				li.manager-list__item
+					include ../blocks/manager.jade
+
+		.tab#tab-item-2
+			form(action="/").form
+				.form__line
+					label(for="login").label Логин
+					input#login(type="text").input
+				.form__line
+					label(for="pass").label Пароль
+					input#pass(type="password").input
+				.form__line
+					label(for="email").label E-mail
+					input#email(type="email").input
+				.form__line
+					label(for="fio").label ФИО
+					input#fio(type="text").input
+				.form__line
+					label(for="phone").label Телефон
+					input#phone(type="tel").input
+				.form__line
+					label(for="position").label Должность
+					input#position(type="text").input
+				.form__line
+					//- TODO выбрать файл
+				.form__line.form__line_top
+					button(type="submit").btn.btn_orange Сохранить
+					+alert-inline()(class="success") Изменения сохранены
+					+alert-inline()(class="error") Изменения не сохранены

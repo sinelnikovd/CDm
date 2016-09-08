@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Поддержка</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" href="_main.min.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" href="media/favicon/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="media/favicon/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="media/favicon/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="media/favicon/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="media/favicon/apple-touch-icon-114x114.png">
+  </head>
+  <body>
+    <div class="page">
+      <!-- BEGIN HEADER-->
+      <header class="header">
+        <div class="container">
+          <div class="top-line">
+            <div class="top-line__logo">
+              <div class="logo"><a href="#" class="logo__link"><img src="media/img/logo.png" alt="" class="logo__img"></a></div>
+            </div>
+            <div class="top-line__call">
+              <div class="call"><a href="tel:" class="call__link">+7 (4832) 68-18-80</a>
+                <div class="call__worktime">по будням с 9:00 до 18:00</div>
+              </div>
+            </div>
+            <div class="top-line__firm">
+              <div class="firm">
+                <div class="firm__select">
+                  <select name="firm" id="select_firm" class="select select_small">
+                    <option value="ООО мирСк">ООО мирСк</option>
+                    <option value="ООО мирСк1">ООО мирСк1</option>
+                    <option value="ООО мирСк2">ООО мирСк2</option>
+                    <option value="ООО мирСк3">ООО мирСк3</option>
+                  </select>
+                </div><a href="#" class="btn btn_icon-small"><i class="icon icon_plus btn__icon"></i></a>
+              </div>
+            </div>
+            <div class="top-line__account">
+              <div class="account">
+                <div class="account__back"></div>
+                <div class="account__control">
+                  <div class="account__name"><i class="icon icon_person account__name-icon"></i>Елена</div>
+                  <div class="account__dropdown">
+                    <hr class="account__hr"><a href="#" class="account__link"><i class="icon icon_settings account__icon"></i>Настройка аккаунта</a><a href="#" class="account__link"><i class="icon icon_close account__icon"></i>Выйти</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <nav class="nav">
+          <div class="container">
+            <ul class="nav__list">
+              <li class="nav__item active"><a href="#" class="nav__link">Статистика</a></li>
+              <li class="nav__item"><a href="#" class="nav__link">Ход работы</a></li>
+              <li class="nav__item"><a href="#" class="nav__link">Поддержка</a></li>
+              <li class="nav__item"><a href="#" class="nav__link">Менеджеры</a></li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <!-- END HEADER-->
+      <!-- BEGIN COMPANY-LINE-->
+      <div class="company-line">
+        <div class="container">
+          <div class="company-line__select">
+            <select name="company" id="select_company" class="select select_big">
+              <option value="itc-media.ru" data-data="{&quot;stat&quot;:true}">itc-media.ru</option>
+              <option value="itc-media.ru1" data-data="{&quot;stat&quot;:true}">itc-media.ru</option>
+              <option value="itc-media.ru2" data-data="{&quot;stat&quot;:false}">itc-media.ru</option>
+              <option value="itc-media.ru3" data-data="{&quot;stat&quot;:true}">itc-media.ru</option>
+            </select>
+          </div>
+          <div class="company-line__btn"><a href="#" class="btn btn_icon btn_icon-big"><i class="icon icon_pen btn__icon"></i></a></div>
+          <div class="company-line__btn"><a href="#" class="btn btn_icon btn_icon-big btn_icon-red"><i class="icon icon_del btn__icon"></i></a></div>
+          <div class="company-line__add-site"><a href="#" class="add-site"><i class="icon icon_plus1 add-site__icon"></i>Добавить сайт</a></div>
+        </div>
+      </div>
+      <!-- END COMPANY-LINE-->
+      <!-- BEGIN CONTENT-->
+      <div class="container">
+        <div class="content">
+          <div class="content__title">Поддержка</div>
+          <div class="tab-container">
+            <ul class="tab-nav">
+              <li class="tab-nav__item tab-nav__item_green"><a href="#tab-item-1" class="tab-nav__link">Задать вопрос</a></li>
+              <li class="tab-nav__item tab-nav__item_green"><a href="#tab-item-2" class="tab-nav__link">Часто задаваемые вопросы</a></li>
+            </ul>
+            <div id="tab-item-1" class="tab">
+              <div class="my-question">
+                <div class="my-question__title">Задайте свой вопрос</div>
+                <form action="/" method="post" enctype="multipart/form-data" class="form">
+                  <div class="form__line">
+                    <label for="subject-1" class="label">Тема</label>
+                    <input id="subject-1" type="text" class="input input_100">
+                  </div>
+                  <div class="form__line">
+                    <label for="text-1" class="label">Текст</label>
+                    <textarea id="text-1" name="" rows="6" class="textarea"></textarea>
+                  </div>
+                  <div class="form__line form__line_top">
+                    <button type="submit" class="btn btn_orange">Отправить</button>
+                    <div class="input-file input-file_inline">
+                      <input id="upload" type="file" class="input-file__input">
+                      <label for="upload" class="input-file__label"><i class="icon icon_file"></i><span>Прикрепить файлы</span></label>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div id="tab-item-2" class="tab">
+              <div class="faq active"><a href="#" class="faq__title"><span>Как установить счетчик Яндекс.Метрики?</span></a>
+                <div class="faq__body">
+                  <div class="faq__text">
+                    <p>Объединение нескольких рекламных кампаний в одном сервисе гораздо эффективней, чем ведение их всех по отдельности. Во-первых, за счет более глубокого анализа — например, мы активно используем данные, полученные при ведении кампании в Яндекс.Директе, при поисковом продвижении и в медийной рекламе. И, во-вторых, за счет большей гибкости — часто бывает так, что эффективность одинаковых объявлений в разных системах отличается в разы. </p>
+                    <p>Объединение нескольких рекламных кампаний в одном сервисе гораздо эффективней, чем ведение их всех по отдельности. Во-первых, за счет более глубокого анализа — например, мы активно используем данные, полученные при ведении кампании в Яндекс.Директе, при поисковом продвижении и в медийной рекламе. И, во-вторых, за счет большей гибкости — часто бывает так, что эффективность одинаковых объявлений в разных системах отличается в разы. </p>
+                    <p>Объединение нескольких рекламных кампаний в одном сервисе гораздо эффективней, чем ведение их всех по отдельности. Во-первых, за счет более глубокого анализа — например, мы активно используем данные, полученные при ведении кампании в Яндекс.Директе, при поисковом продвижении и в медийной рекламе. И, во-вторых, за счет большей гибкости — часто бывает так, что эффективность одинаковых объявлений в разных системах отличается в разы. </p>
+                  </div>
+                  <hr class="hr">
+                  <div class="faq__control"><a href="#" class="btn btn_border btn_up">Свернуть</a>
+                    <div class="link-icon__group"><a href="#" class="link-icon"><i class="icon icon_pen"></i></a><a href="#" class="link-icon"><i class="icon icon_del"></i></a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="faq"><a href="#" class="faq__title"><span>Для каких сайтов можно подключить услугу?</span></a>
+                <div class="faq__body">
+                  <div class="faq__text">
+                    <p>Объединение нескольких рекламных кампаний в одном сервисе гораздо эффективней, чем ведение их всех по отдельности. Во-первых, за счет более глубокого анализа — например, мы активно используем данные, полученные при ведении кампании в Яндекс.Директе, при поисковом продвижении и в медийной рекламе. И, во-вторых, за счет большей гибкости — часто бывает так, что эффективность одинаковых объявлений в разных системах отличается в разы. </p>
+                  </div>
+                  <hr class="hr">
+                  <div class="faq__control"><a href="#" class="btn btn_border btn_up">Свернуть</a>
+                    <div class="link-icon__group"><a href="#" class="link-icon"><i class="icon icon_pen"></i></a><a href="#" class="link-icon"><i class="icon icon_del"></i></a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="faq-question">
+                <div class="faq-question__title">Задайте свой вопрос</div>
+                <hr class="hr">
+                <form action="/" method="post" enctype="multipart/form-data" class="form">
+                  <div class="form__line">
+                    <label for="subject-2" class="label">Заголовок вашего вопроса</label>
+                    <input id="subject-2" type="text" class="input">
+                  </div>
+                  <div class="form__line">
+                    <label for="text-2" class="label">Ваш вопрос</label>
+                    <textarea id="text-2" name="" rows="14" class="textarea-tiny"></textarea>
+                  </div>
+                  <div class="form__line form__line_top">
+                    <button type="submit" class="btn btn_orange">Отправить вопрос</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END CONTENT-->
+    </div>
+    <!-- BEGIN FOOTER-->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__block">
+          <p>©2016 СRM<br><a href="#" class="footer__link">Условия использования</a></p>
+        </div>
+        <div class="footer__block">
+          <p> <a href="tel:8 800 700-87-31" class="footer__link footer__link_noline">8 800 700-87-31 </a><br><a href="#" class="footer__link">Обратный звонок</a></p>
+        </div>
+        <div class="footer__block">
+          <p><a href="mailto:support@CRM.ru" class="footer__link footer__link_noline">support@CRM.ru</a></p>
+        </div>
+      </div>
+    </footer>
+    <!-- END FOOTER-->
+    <div class="hidden">
+    </div><!--[if lt IE 9]>
+    <script src="libs/html5shiv/es5-shim.min.js"></script>
+    <script src="libs/html5shiv/html5shiv.min.js"></script>
+    <script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>
+    <script src="libs/respond/respond.min.js"></script><![endif]-->
+    <script src="libs/modernizr/modernizr.js"></script>
+    <script src="libs/jquery/jquery-3.1.0.min.js"></script>
+    <script src="libs/inputmask/inputmask.js"></script>
+    <script src="libs/selectize/selectize.min.js"></script>
+    <script src="libs/easytabs/jquery.easytabs.min.js"></script>
+    <script src="libs/tooltipster/tooltipster.bundle.min.js"></script>
+    <script src="libs/moment/moment.min.js"></script>
+    <script src="libs/daterangepicker/jquery.daterangepicker.min.js"></script>
+    <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
+    <script src="js/common.js"></script>
+  </body>
+</html>

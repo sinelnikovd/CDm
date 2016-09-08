@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Настройка аккаунта</title>
+    <title>Менеджеры</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
     <link rel="stylesheet" href="_main.min.css">
@@ -85,65 +85,13 @@
       <!-- BEGIN CONTENT-->
       <div class="container">
         <div class="content">
-          <div class="content__title">Настройка аккаунта</div>
+          <div class="content__title">Менеджеры</div>
           <div class="tab-container">
             <ul class="tab-nav">
-              <li class="tab-nav__item tab-nav__item_green"><a href="#tab-item-1" class="tab-nav__link">Личные данные</a></li>
-              <li class="tab-nav__item tab-nav__item_green"><a href="#tab-item-2" class="tab-nav__link">Пароль</a></li>
-              <li class="tab-nav__item tab-nav__item_orange"><a href="#tab-item-3" class="tab-nav__link">Управление</a></li>
+              <li class="tab-nav__item tab-nav__item_orange"><a href="#tab-item-1" class="tab-nav__link">Менеджеры</a></li>
+              <li class="tab-nav__item tab-nav__item_orange"><a href="#tab-item-2" class="tab-nav__link">Добавить менеджера</a></li>
             </ul>
             <div id="tab-item-1" class="tab">
-              <form action="/" class="form">
-                <div class="form__line">
-                  <label for="name" class="label">Название организации</label>
-                  <input id="name" type="text" name="Физическое лицо" class="input static-data__input">
-                  <div class="static-data">Физическое лицо</div><a href="#" class="btn btn_border static-data__btn">Изменить</a>
-                </div>
-                <div class="form__line">
-                  <div class="label">E-mail</div>
-                  <div class="static-data">info@itc-media.ru</div>
-                </div>
-                <div class="form__line">
-                  <label for="name" class="label">Ваше имя</label>
-                  <input id="name" type="text" class="input">
-                </div>
-                <div class="form__line">
-                  <label for="phone" class="label">Контактный телефон</label>
-                  <input id="phone" type="tel" class="input">
-                </div>
-                <div class="form__line">
-                  <label for="position" class="label">Должность</label>
-                  <input id="position" type="text" class="input">
-                </div>
-                <div class="form__line form__line_top">
-                  <button type="submit" class="btn btn_orange">Сохранить</button>
-                        <div class="alert-inline alert-inline_success">Изменения сохранены
-                        </div>
-                        <div class="alert-inline alert-inline_error">Изменения не сохранены
-                        </div>
-                </div>
-              </form>
-            </div>
-            <div id="tab-item-2" class="tab">
-              <form action="/" class="form">
-                <div class="form__line">
-                  <label for="name" class="label">Старый пароль</label>
-                  <input id="name" type="password" class="input">
-                </div>
-                <div class="form__line">
-                  <label for="phone" class="label">Новый пароль</label>
-                  <input id="phone" type="password" class="input">
-                </div>
-                <div class="form__line">
-                  <button type="submit" class="btn btn_orange">Сохранить</button>
-                        <div class="alert-inline alert-inline_success">Изменения сохранены
-                        </div>
-                        <div class="alert-inline alert-inline_error">Изменения не сохранены
-                        </div>
-                </div>
-              </form>
-            </div>
-            <div id="tab-item-3" class="tab">
               <ul class="manager-list">
                 <li class="manager-list__item">
                   <div class="manager">
@@ -154,43 +102,60 @@
                   </div>
                 </li>
                 <li class="manager-list__item">
-                  <div class="manager manager_add">
+                  <div class="manager">
                     <div class="manager__img"></div>
-                    <div class="manager__name">Добавить менеджера</div>
-                    <div class="manager__btn-group"><a href="#" class="btn btn_icon btn_icon-big"><i class="icon icon_plus2 btn__icon"></i></a></div>
+                    <div class="manager__name">Семен Фролов</div>
+                    <div class="manager__position">главный менеджер</div>
+                    <div class="manager__btn-group"><a href="#" class="btn btn_icon btn_icon-big"><i class="icon icon_pen btn__icon"></i></a><a href="#" class="btn btn_icon btn_icon-big btn_icon-red"><i class="icon icon_del btn__icon"></i></a></div>
+                  </div>
+                </li>
+                <li class="manager-list__item">
+                  <div class="manager">
+                    <div class="manager__img"></div>
+                    <div class="manager__name">Семен Фролов</div>
+                    <div class="manager__position">главный менеджер</div>
+                    <div class="manager__btn-group"><a href="#" class="btn btn_icon btn_icon-big"><i class="icon icon_pen btn__icon"></i></a><a href="#" class="btn btn_icon btn_icon-big btn_icon-red"><i class="icon icon_del btn__icon"></i></a></div>
+                  </div>
+                </li>
+                <li class="manager-list__item">
+                  <div class="manager">
+                    <div class="manager__img"></div>
+                    <div class="manager__name">Семен Фролов</div>
+                    <div class="manager__position">главный менеджер</div>
+                    <div class="manager__btn-group"><a href="#" class="btn btn_icon btn_icon-big"><i class="icon icon_pen btn__icon"></i></a><a href="#" class="btn btn_icon btn_icon-big btn_icon-red"><i class="icon icon_del btn__icon"></i></a></div>
                   </div>
                 </li>
               </ul>
+            </div>
+            <div id="tab-item-2" class="tab">
               <form action="/" class="form">
-                <div class="block block_border-gray">
-                  <div class="form__title">Схема оплаты:</div>
-                  <div class="form__line">
-                    <div class="radio">
-                      <input id="radio1" type="radio" name="radio1" class="radio__input">
-                      <label for="radio1" class="radio__label"><span class="radio__dot"></span>Абонентская плата</label>
-                    </div>
-                    <div class="radio">
-                      <input id="radio2" type="radio" name="radio1" class="radio__input">
-                      <label for="radio2" class="radio__label"><span class="radio__dot"></span>Позиции</label>
-                    </div>
-                  </div>
-                </div>
-                <div class="form__title">Сменить пароль</div>
                 <div class="form__line">
-                  <label for="phone" class="label">Задать новый пароль</label>
-                  <input id="phone" type="password" class="input">
-                </div>
-                <div class="form__line form__line_no-margin">
-                  <div class="radio radio_inline">
-                    <input id="radio3" type="radio" name="radio2" class="radio__input">
-                    <label for="radio3" class="radio__label"><span class="radio__dot"></span>Активен</label>
-                  </div>
-                  <div class="radio radio_inline">
-                    <input id="radio4" type="radio" name="radio2" class="radio__input">
-                    <label for="radio4" class="radio__label"><span class="radio__dot"></span>Неактивен</label>
-                  </div>
+                  <label for="login" class="label">Логин</label>
+                  <input id="login" type="text" class="input">
                 </div>
                 <div class="form__line">
+                  <label for="pass" class="label">Пароль</label>
+                  <input id="pass" type="password" class="input">
+                </div>
+                <div class="form__line">
+                  <label for="email" class="label">E-mail</label>
+                  <input id="email" type="email" class="input">
+                </div>
+                <div class="form__line">
+                  <label for="fio" class="label">ФИО</label>
+                  <input id="fio" type="text" class="input">
+                </div>
+                <div class="form__line">
+                  <label for="phone" class="label">Телефон</label>
+                  <input id="phone" type="tel" class="input">
+                </div>
+                <div class="form__line">
+                  <label for="position" class="label">Должность</label>
+                  <input id="position" type="text" class="input">
+                </div>
+                <div class="form__line">
+                </div>
+                <div class="form__line form__line_top">
                   <button type="submit" class="btn btn_orange">Сохранить</button>
                         <div class="alert-inline alert-inline_success">Изменения сохранены
                         </div>

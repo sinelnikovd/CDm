@@ -1,0 +1,60 @@
+.my-question
+	&__title
+		font-size: 20px
+		@extend %proximabold
+		text-transform: uppercase
+		text-align: center
+		margin: 10px 0
+
+.faq-question
+	&__title
+		color: $c4
+		font-size: 25px
+		@extend %proximasemibold
+		margin: 15px 0
+
+
+.faq
+	margin: 20px 0
+	&.active
+		border: 0 none
+		padding: 0
+		.faq
+			&__title
+				margin: 0
+				padding: 0
+				border-radius: 0
+				border: 0 none
+				color: $c1
+				span
+					border-bottom: 0 none
+			&__body
+				display: block
+	&__body
+		display: none
+		@extend .block
+		@extend .block_border-gray
+		padding: 30px
+	&__title
+		@extend .block
+		@extend .block_border-gray
+		padding-bottom: 20px
+		display: block
+		cursor: pointer
+		color: $c2
+		@extend %bold
+		font-size: 17px
+		text-decoration: none
+		&:hover
+			span
+				border-bottom-color: transparent
+		span
+			border-bottom: 1px dashed $c2
+			padding-bottom: 2px
+	&__text
+		color: #787878
+		font-size: 17px
+		p
+			margin: 15px 0
+	&__control
+		padding: 20px 0

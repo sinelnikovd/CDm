@@ -77,7 +77,6 @@ $(document).ready(function() {
 	});
 
 	moment.locale('ru');
-	console.log(moment().format('YYYY-DD-MM'))
 
 	$('.datetimepiker').each(function(){
 		var container = $(this).closest('.container'),
@@ -94,4 +93,72 @@ $(document).ready(function() {
 
 	});
 
+/*
+var inputs = document.querySelectorAll( '.inputfile' );
+Array.prototype.forEach.call( inputs, function( input )
+{
+	var label	 = input.nextElementSibling,
+		labelVal = label.innerHTML;
+
+	input.addEventListener( 'change', function( e )
+	{
+		var fileName = '';
+		if( this.files && this.files.length > 1 )
+			fileName = ( this.getAttribute( 'data-multiple-caption' ) || '' ).replace( '{count}', this.files.length );
+		else
+			fileName = e.target.value.split( '\\' ).pop();
+
+		if( fileName )
+			label.querySelector( 'span' ).innerHTML = fileName;
+		else
+			label.innerHTML = labelVal;
+	});
+});*/
+
+	$('.input-file').each(function() {
+		var input = $(this).find('.input-file__input'),
+			label = $(this).find('.input-file__label span'),
+			labelVal = $(this).text();
+
+		console.log(label.text());
+
+		input.on('change', function(e) {
+			var thisInput = $(this)[0],
+				fileName = '';
+			if( thisInput.files && thisInput.files.length > 1 )
+				fileName = ( thisInput.getAttribute( 'data-multiple-caption' ) || '' ).replace( '{count}', thisInput.files.length );
+			else
+				fileName = e.target.value.split( '\\' ).pop();
+
+			if( fileName )
+				label.text(fileName);
+			else
+				label.text(labelVal);
+		});
+	});
+
+});
+
+
+tinymce.init({
+	selector: '.textarea-tiny',
+	menubar: false,
+	theme: 'modern',
+	plugins: [
+	'advlist autolink lists link image charmap hr anchor',
+	'searchreplace wordcount visualblocks visualchars code fullscreen',
+	'insertdatetime media nonbreaking save table contextmenu directionality',
+	'emoticons template paste textcolor colorpicker textpattern imagetools'
+	],
+	toolbar1: 'insertfile undo redo | styleselect fontselect fontsizeselect | forecolor backcolor emoticons',
+	toolbar2: 'bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image media',
+	image_advtab: true,
+	templates: [
+	{ title: 'Test template 1', content: 'Test 1' },
+	{ title: 'Test template 2', content: 'Test 2' }
+	],
+	content_css: [
+	'//fonts.googleapis.com/css?family=Lato:300,300i,400,400i',
+	'//www.tinymce.com/css/codepen.min.css'
+	]
 });

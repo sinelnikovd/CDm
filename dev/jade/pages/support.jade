@@ -1,0 +1,78 @@
+extends ../base/content.jade
+
+block title
+	title Поддержка
+
+block content-title
+	| Поддержка
+
+block content
+	.tab-container
+		ul.tab-nav
+			li.tab-nav__item.tab-nav__item_green
+				a(href="#tab-item-1").tab-nav__link Задать вопрос
+			li.tab-nav__item.tab-nav__item_green
+				a(href="#tab-item-2").tab-nav__link Часто задаваемые вопросы
+		.tab#tab-item-1
+			.my-question
+				.my-question__title Задайте свой вопрос
+				form(action="/", method="post", enctype="multipart/form-data").form
+					.form__line
+						label(for="subject-1").label Тема
+						input#subject-1(type="text").input.input_100
+					.form__line
+						label(for="text-1").label Текст
+						textarea#text-1(name="", rows="6").textarea
+					.form__line.form__line_top
+						button(type="submit").btn.btn_orange Отправить
+						.input-file.input-file_inline
+							input#upload(type="file").input-file__input
+							label(for="upload").input-file__label
+								i.icon.icon_file
+								span Прикрепить файлы
+
+		.tab#tab-item-2
+			.faq.active
+				a(href="#").faq__title
+					span Как установить счетчик Яндекс.Метрики?
+				.faq__body
+					//- TODO прокрутка текста
+					.faq__text
+						p Объединение нескольких рекламных кампаний в одном сервисе гораздо эффективней, чем ведение их всех по отдельности. Во-первых, за счет более глубокого анализа — например, мы активно используем данные, полученные при ведении кампании в Яндекс.Директе, при поисковом продвижении и в медийной рекламе. И, во-вторых, за счет большей гибкости — часто бывает так, что эффективность одинаковых объявлений в разных системах отличается в разы. 
+						p Объединение нескольких рекламных кампаний в одном сервисе гораздо эффективней, чем ведение их всех по отдельности. Во-первых, за счет более глубокого анализа — например, мы активно используем данные, полученные при ведении кампании в Яндекс.Директе, при поисковом продвижении и в медийной рекламе. И, во-вторых, за счет большей гибкости — часто бывает так, что эффективность одинаковых объявлений в разных системах отличается в разы. 
+						p Объединение нескольких рекламных кампаний в одном сервисе гораздо эффективней, чем ведение их всех по отдельности. Во-первых, за счет более глубокого анализа — например, мы активно используем данные, полученные при ведении кампании в Яндекс.Директе, при поисковом продвижении и в медийной рекламе. И, во-вторых, за счет большей гибкости — часто бывает так, что эффективность одинаковых объявлений в разных системах отличается в разы. 
+					hr.hr
+					.faq__control
+						a(href="#").btn.btn_border.btn_up Свернуть
+						.link-icon__group
+							a(href="#").link-icon
+								i.icon.icon_pen
+							a(href="#").link-icon
+								i.icon.icon_del
+			.faq
+				a(href="#").faq__title
+					span Для каких сайтов можно подключить услугу?
+				.faq__body
+					.faq__text
+						p Объединение нескольких рекламных кампаний в одном сервисе гораздо эффективней, чем ведение их всех по отдельности. Во-первых, за счет более глубокого анализа — например, мы активно используем данные, полученные при ведении кампании в Яндекс.Директе, при поисковом продвижении и в медийной рекламе. И, во-вторых, за счет большей гибкости — часто бывает так, что эффективность одинаковых объявлений в разных системах отличается в разы. 
+					hr.hr
+					.faq__control
+						a(href="#").btn.btn_border.btn_up Свернуть
+						.link-icon__group
+							a(href="#").link-icon
+								i.icon.icon_pen
+							a(href="#").link-icon
+								i.icon.icon_del
+
+			.faq-question
+				.faq-question__title Задайте свой вопрос
+				hr.hr
+				form(action="/", method="post", enctype="multipart/form-data").form
+					.form__line
+						label(for="subject-2").label Заголовок вашего вопроса
+						input#subject-2(type="text").input
+					.form__line
+						label(for="text-2").label Ваш вопрос
+						textarea#text-2(name="", rows="14").textarea-tiny
+					.form__line.form__line_top
+						button(type="submit").btn.btn_orange Отправить вопрос
