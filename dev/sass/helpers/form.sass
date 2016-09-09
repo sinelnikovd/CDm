@@ -89,6 +89,8 @@
 
 .input-file
 	overflow: hidden
+	text-overflow: ellipsis
+	white-space: nowrap
 	&_inline
 		display: inline-block
 		vertical-align: middle
@@ -114,6 +116,47 @@
 			position: absolute
 			top: 15px
 			left: 30px
+		&:hover
+			border-color: $c2
+
+.input-image
+	text-overflow: ellipsis
+	white-space: nowrap
+	&__img
+		display: inline-block
+		width: 100px
+		height: 100px
+		border-radius: 5px
+		border: 1px solid rgba($c7,.4)
+		overflow: hidden
+		vertical-align: middle
+		position: relative
+		img
+			display: block
+			position: absolute
+			top: 0
+			bottom: 0
+			right: 0
+			left: 0
+			margin: auto
+			max-width: 100%
+			max-height: 100%
+	&__file
+		overflow: hidden
+		display: inline-block
+		margin-left: 20px
+		vertical-align: middle
+	&__input
+		display: none
+		position: absolute
+		left: -10000px
+	&__label
+		display: inline-block
+		color: $c2
+		text-decoration: underline
+		cursor: pointer
+		&:hover
+			text-decoration: none
 
 
 
@@ -133,9 +176,14 @@
 			+size(37px)
 		&-big
 			+size(47px)
+			&:hover
+				.icon
+					@extend .icon_pen_h
 		&-red
 			&:hover
 				border-color: $c11
+				.icon
+					@extend .icon_del_h
 
 	&_orange
 		height: 47px
@@ -143,9 +191,18 @@
 		padding: 0 40px
 		color: #fff
 		font-size: 17px
+		&:hover
+			background-color: #e44501
 	&_border
 		padding: 10px 15px
 		color: $c9
+		&:hover
+			border-color: $c2
+	&_popup
+		padding: 10px 15px
+		color: $c1
+		margin: 0 5px
+		@extend %proximabold
 		&:hover
 			border-color: $c2
 	&_up

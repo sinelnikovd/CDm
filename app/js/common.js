@@ -93,34 +93,12 @@ $(document).ready(function() {
 
 	});
 
-/*
-var inputs = document.querySelectorAll( '.inputfile' );
-Array.prototype.forEach.call( inputs, function( input )
-{
-	var label	 = input.nextElementSibling,
-		labelVal = label.innerHTML;
-
-	input.addEventListener( 'change', function( e )
-	{
-		var fileName = '';
-		if( this.files && this.files.length > 1 )
-			fileName = ( this.getAttribute( 'data-multiple-caption' ) || '' ).replace( '{count}', this.files.length );
-		else
-			fileName = e.target.value.split( '\\' ).pop();
-
-		if( fileName )
-			label.querySelector( 'span' ).innerHTML = fileName;
-		else
-			label.innerHTML = labelVal;
-	});
-});*/
 
 	$('.input-file').each(function() {
 		var input = $(this).find('.input-file__input'),
 			label = $(this).find('.input-file__label span'),
-			labelVal = $(this).text();
+			labelVal = label.text();
 
-		console.log(label.text());
 
 		input.on('change', function(e) {
 			var thisInput = $(this)[0],
@@ -136,6 +114,112 @@ Array.prototype.forEach.call( inputs, function( input )
 				label.text(labelVal);
 		});
 	});
+
+
+	$('.input-image').each(function() {
+		var input = $(this).find('.input-image__input'),
+			img = $(this).find('.input-image__img img'),
+			imgSrc = img.attr('src'),
+			label = $(this).find('.input-image__label'),
+			labelVal = label.text();
+
+
+		input.on('change', function(e) {
+			var thisInput = $(this)[0],
+				fileName = '';
+			if( thisInput.files && thisInput.files.length > 0 )
+				if ( thisInput.files[0].type.match('image.*') ) {
+					var reader = new FileReader();
+					reader.onload = function(e) {
+						img.attr('src', e.target.result);
+					}
+					reader.readAsDataURL(thisInput.files[0]);
+					fileName = e.target.value.split( '\\' ).pop();
+				}
+
+			if( fileName )
+				label.text(fileName);
+			else{
+				img.attr('src', imgSrc);
+				label.text(labelVal);
+				return false;
+			}
+		});
+	});
+
+
+
+
+
+	$('.static-data__btn').click(function(){
+		var btn = $(this),
+			label = btn.prev('.static-data'),
+			input = btn.prevAll('.static-data__input');
+
+		btn.hide();
+		label.hide();
+		input.val(label.text()).animate({width: "show"}, 300, function () {
+			input.focus();
+		});
+		return false;
+	});
+
+	$(".faq__title").click(function () {
+		if(!$(this).closest('.faq').hasClass('active')){
+			var faq = $(this).closest(".faq"),
+				body = faq.find(".faq__body");
+				faq.addClass('active');
+				body.slideDown();
+		}
+		return false;
+	});
+
+
+	$(".faq__control .btn_up").click(function () {
+		if($(this).closest('.faq').hasClass('active')){
+			var faq = $(this).closest(".faq"),
+				body = faq.find(".faq__body");
+				body.slideUp(400,function(){
+					faq.removeClass('active');
+				});
+
+		}
+		return false;
+	});
+
+
+	$('.faq').each(function(i){
+		var faq = $(this),
+			body = faq.find(".faq__body");
+			body.slideUp(400,function(){
+				faq.removeClass('active');
+			});
+	});
+
+	
+
+
+	$('.faq__frame').each(function(){
+		var $frame = $(this),
+			$wrap = $frame.closest('.faq__text');
+
+		$frame.sly({
+			speed: 300,
+			activatePageOn: 'click',
+			scrollBy: 100,
+			dragHandle: 1,
+			dynamicHandle: 1,
+			clickBar: 1,
+
+			// Buttons
+			forward: $wrap.find('.faq__text-control_down'),
+			backward: $wrap.find('.faq__text-control_up'),
+		});
+	});
+
+
+
+
 
 });
 

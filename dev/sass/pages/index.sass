@@ -1,0 +1,101 @@
+.table-statistic
+	border-collapse: separate
+	border-spacing: 1px
+	margin-bottom: 15px
+	td,th
+		vertical-align: middle
+		background-color: #f2f2f2
+	td
+		padding: 10px 5px
+		color: $c1
+		text-align: center
+	th
+		text-align: left
+		padding: 15px 30px
+		font-size: 16px
+		min-width: 590px
+		box-sizing: border-box
+	.table__indent
+		padding: 0
+		height: 1px
+		background-color: #fff
+	.table-statistic__title
+		font-size: 21px
+		@extend %proximasemibold
+		color: $c4
+	.table-statistic__period
+		white-space: nowrap
+		padding-right: 70px
+		position: relative
+	&__del
+		position: absolute
+		top: 2px
+		right: 5px
+		cursor: pointer
+		&:hover
+			.icon
+				@extend .icon_del2_h
+	&__icon-group
+		position: absolute
+		bottom: 10px
+		right: 5px
+		.icon
+			margin-left: 5px
+	&__head
+		color: $c9
+		font-size: 15px
+		line-height: 1
+		th
+			text-align: center
+			font-size: 15px
+		tr:first-child
+			th
+				border-radius: 3px 0 0 3px
+				border-top: 1px solid #f0f0f0
+				border-left: 1px solid #f0f0f0
+				border-bottom: 1px solid #f0f0f0
+			td:last-child
+				border-radius: 0 3px 0 0
+				border-top: 1px solid #f0f0f0
+				border-right: 1px solid #f0f0f0
+		tr:nth-child(2)
+			td:last-child
+				border-radius: 0 0 3px 0
+				border-bottom: 1px solid #f0f0f0
+				border-left: 1px solid #f0f0f0
+	&__body
+		color: #525252
+		font-size: 14px
+		tr
+			th
+				border-left: 1px solid #f0f0f0
+			td:last-child
+				border-right: 1px solid #f0f0f0
+		tr:first-child
+			th
+				border-radius: 3px 3px 0 0
+				border-top: 1px solid #f0f0f0
+				border-left: 1px solid #f0f0f0
+				border-right: 1px solid #f0f0f0
+		tr:nth-child(2)
+			td,th
+				border-top: 1px solid #f0f0f0
+			th
+				border-radius: 0 0 0 3px
+			td:last-child
+				border-radius: 0 0 3px 0
+		tr:nth-child(4)
+			td,th
+				border-top: 1px solid #f0f0f0
+			th
+				border-radius: 3px 0 0 0
+			td:last-child
+				border-radius: 0 3px 0 0
+		tr:last-child
+			td,th
+				border-bottom: 1px solid #f0f0f0
+			th
+				border-radius: 0 0 0 3px
+			td:last-child
+				border-radius: 0 0 3px 0
+

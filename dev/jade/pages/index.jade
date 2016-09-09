@@ -16,14 +16,126 @@ block content
 			li.tab-nav__item.tab-nav__item_green
 				a(href="#tab-item-3").tab-nav__link Ключевые фразы
 		.tab#tab-item-1
-			p Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Составитель диких океана страну продолжил, безорфографичный точках сбить наш гор!
+			.statistic
+				.block.block_gray
+					.statistic-stage
+						.statistic-stage__report
+							span.statistic-stage__text Отчетный период
+							.period-block.active 1 мая 2016 - 1 июня 2016
+							.period-block 1 мая 2016 - 1 июня 2016
+							.period-block 1 мая 2016 - 1 июня 2016
+						.statistic-stage__opt
+							span.statistic-stage__text Выбрать период
+							input(type="text").period-block.period-block_border.period-block_white.datetimepiker
+
+			.table-container
+				table.table-statistic
+					thead.table-statistic__head
+						tr
+							th(rowspan=2) Параметры
+							td(colspan=3) Период
+						tr
+							td.table-statistic__period 25 июля 2015<br>-<br>25 июлю 2015
+								.table-statistic__del
+									i.icon.icon_del2
+								.table-statistic__icon-group
+									i.icon.icon_hammer
+									i.icon.icon_list
+							td.table-statistic__period 25 июля 2015<br>-<br>25 июлю 2015
+								.table-statistic__del
+									i.icon.icon_del2
+								.table-statistic__icon-group
+									i.icon.icon_list
+							td.table-statistic__period 25 июля 2015<br>-<br>25 июлю 2015
+								.table-statistic__del
+									i.icon.icon_del2
+								.table-statistic__icon-group
+									i.icon.icon_list
+						tr
+							td.table__indent
+
+					tbody.table-statistic__body
+						tr
+							th.table-statistic__title(colspan=4) Цели
+						tr
+							th Выполнение целей
+								.question
+									a(href="javascript:void(0);").question__link
+										i.icon.icon_question
+									.question__tooltip Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.
+							td 8
+							td 345<br>12345
+							td 345<br>12345
+						tr
+							td.table__indent
+						tr
+							th.table-statistic__title Поведенческие показатели
+							td 
+							td 
+							td 
+						tr
+							th Посещения
+							td 
+							td 
+							td 
+						tr
+							th Просмотры страниц
+							td 
+							td 
+							td 
+						tr
+							th Уникальные просмотры страниц
+							td 
+							td 
+							td 
+						tr
+							th Посетители
+							td 
+							td 
+							td 
+						tr
+							th Новые посетители
+							td 
+							td 
+							td 
+						tr
+							th Просмотренных страниц за посещение
+							td 
+							td 
+							td 
+						tr
+							th Отказы
+							td 
+							td 
+							td 
+						tr
+							th Процент отказов
+							td 
+							td 
+							td 
+						tr
+							th Среднее время на сайте
+							td 
+							td 
+							td 
+						tr
+							th Время проведенное на сайте
+							td 
+							td 
+							td 
+						tr
+							th Среднее колличество уникальных запросов в сутки
+							td 
+							td 
+							td 
+
 		.tab#tab-item-2
 			.attendance
 				.block.block_gray
-					.attendance-stage
-						span.attendance-stage__text Период отчета:
+					.period-stage
+						span.period-stage__text Период отчета:
 						
-						input(type="text").attendance-block.attendance-block_icon.attendance-block_border.attendance-block_white.datetimepiker
+						input(type="text").period-block.period-block_icon.period-block_border.period-block_white.datetimepiker
 				.attendance-sort
 					ul.attendance-sort__list
 						li.attendance-sort__item.active
@@ -77,7 +189,7 @@ block content
 									td.table__url
 										span URL
 										.question
-											a(href="#").question__link
+											a(href="javascript:void(0);").question__link
 												i.icon.icon_question
 											.question__tooltip Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.
 									td 26-Июл

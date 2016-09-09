@@ -45,7 +45,12 @@ block content
 					label(for="position").label Должность
 					input#position(type="text").input
 				.form__line
-					//- TODO выбрать файл
+					.input-image
+						.input-image__img
+							img(src="media/img/no-image.jpg", alt="")
+						.input-image__file
+							input#upload(type="file").input-image__input
+							label(for="upload").input-image__label Выберите файл
 				.form__line.form__line_top
 					button(type="submit").btn.btn_orange Сохранить
 					+alert-inline()(class="success") Изменения сохранены

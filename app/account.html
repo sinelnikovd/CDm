@@ -37,7 +37,7 @@
                     <option value="ООО мирСк2">ООО мирСк2</option>
                     <option value="ООО мирСк3">ООО мирСк3</option>
                   </select>
-                </div><a href="#" class="btn btn_icon-small"><i class="icon icon_plus btn__icon"></i></a>
+                </div><a href="#" class="btn btn_icon btn_icon-small"><i class="icon icon_plus btn__icon"></i></a>
               </div>
             </div>
             <div class="top-line__account">
@@ -97,7 +97,7 @@
                 <div class="form__line">
                   <label for="name" class="label">Название организации</label>
                   <input id="name" type="text" name="Физическое лицо" class="input static-data__input">
-                  <div class="static-data">Физическое лицо</div><a href="#" class="btn btn_border static-data__btn">Изменить</a>
+                  <div class="static-data">Физическое лицо</div><a href="javascript:void(0);" class="btn btn_border static-data__btn">Изменить</a>
                 </div>
                 <div class="form__line">
                   <div class="label">E-mail</div>
@@ -134,7 +134,7 @@
                   <label for="phone" class="label">Новый пароль</label>
                   <input id="phone" type="password" class="input">
                 </div>
-                <div class="form__line">
+                <div class="form__line form__line_top">
                   <button type="submit" class="btn btn_orange">Сохранить</button>
                         <div class="alert-inline alert-inline_success">Изменения сохранены
                         </div>
@@ -190,7 +190,7 @@
                     <label for="radio4" class="radio__label"><span class="radio__dot"></span>Неактивен</label>
                   </div>
                 </div>
-                <div class="form__line">
+                <div class="form__line form__line_top">
                   <button type="submit" class="btn btn_orange">Сохранить</button>
                         <div class="alert-inline alert-inline_success">Изменения сохранены
                         </div>
@@ -218,9 +218,7 @@
         </div>
       </div>
     </footer>
-    <!-- END FOOTER-->
-    <div class="hidden">
-    </div><!--[if lt IE 9]>
+    <!-- END FOOTER--><!--[if lt IE 9]>
     <script src="libs/html5shiv/es5-shim.min.js"></script>
     <script src="libs/html5shiv/html5shiv.min.js"></script>
     <script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>
@@ -233,7 +231,25 @@
     <script src="libs/tooltipster/tooltipster.bundle.min.js"></script>
     <script src="libs/moment/moment.min.js"></script>
     <script src="libs/daterangepicker/jquery.daterangepicker.min.js"></script>
+    <script src="libs/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="libs/sly/sly.min.js"></script>
     <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
     <script src="js/common.js"></script>
+    <div class="hidden">
+      <div id="popup-del-account" class="popup">
+        <div class="popup__subtitle">Вы уверены что хотите удалить аккаунт?</div>
+        <div class="popup__btn"><a href="#" class="btn btn_popup">Да</a><a href="#" class="btn btn_popup">Нет</a></div>
+      </div>
+      <script>
+        $(document).ready(function() {
+        	$.magnificPopup.open({
+        		items: {
+        			src: '#popup-del-account',
+        			type: 'inline'
+        		},
+        	});
+        });
+      </script>
+    </div>
   </body>
 </html>

@@ -26,8 +26,7 @@ html
 			block base-content
 				//- Здесь пишем код 
 		include ../blocks/footer.jade
-		.hidden
-			block popup
+
 
 		<!--[if lt IE 9]>
 		script(src="libs/html5shiv/es5-shim.min.js")
@@ -45,6 +44,10 @@ html
 		script(src="libs/tooltipster/tooltipster.bundle.min.js")
 		script(src="libs/moment/moment.min.js")
 		script(src="libs/daterangepicker/jquery.daterangepicker.min.js")
+		script(src="libs/magnific-popup/jquery.magnific-popup.min.js")
+		script(src="libs/sly/sly.min.js")
 		script(src="//cdn.tinymce.com/4/tinymce.min.js")
 		//---addSmartScript---//
 		script(src="js/common.js")
+		.hidden
+			block popup

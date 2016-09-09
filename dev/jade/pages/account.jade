@@ -21,8 +21,7 @@ block content
 					label(for="name").label Название организации
 					input#name(type="text" name="Физическое лицо").input.static-data__input
 					.static-data Физическое лицо
-					//-TODO Сделать добавления инпута по клику
-					a(href="#").btn.btn_border.static-data__btn Изменить
+					a(href="javascript:void(0);").btn.btn_border.static-data__btn Изменить
 				.form__line
 					.label E-mail
 					.static-data info@itc-media.ru
@@ -47,7 +46,7 @@ block content
 				.form__line
 					label(for="phone").label Новый пароль
 					input#phone(type="password").input
-				.form__line
+				.form__line.form__line_top
 					button(type="submit").btn.btn_orange Сохранить
 					+alert-inline()(class="success") Изменения сохранены
 					+alert-inline()(class="error") Изменения не сохранены
@@ -101,10 +100,23 @@ block content
 						label(for="radio4").radio__label
 							span.radio__dot
 							| Неактивен
-				.form__line
+				.form__line.form__line_top
 					button(type="submit").btn.btn_orange Сохранить
 					+alert-inline()(class="success") Изменения сохранены
 					+alert-inline()(class="error") Изменения не сохранены
 
 block popup
-	//-TODO всплывающие окно
+	.popup#popup-del-account
+		.popup__subtitle Вы уверены что хотите удалить аккаунт?
+		.popup__btn
+			a(href="#").btn.btn_popup Да
+			a(href="#").btn.btn_popup Нет
+	script.
+		$(document).ready(function() {
+			$.magnificPopup.open({
+				items: {
+					src: '#popup-del-account',
+					type: 'inline'
+				},
+			});
+		});

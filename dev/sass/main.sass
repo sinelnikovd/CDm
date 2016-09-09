@@ -7,6 +7,7 @@
 @import "libs/selectize.sass"
 @import "libs/tooltipster.sass"
 @import "libs/daterangepicker.sass"
+@import "libs/magnific-popup.sass"
 //---addSmartScript---//
 
 *::-webkit-input-placeholder
@@ -51,6 +52,15 @@ body
 	background-color: $c3
 	height: 100%
 
+img
+	max-width: 100%
+
+strong
+	@extend %bold
+
+em
+	%italic
+
 .container
 	width: 1165px
 	padding: 0 15px
@@ -62,6 +72,9 @@ body
 	padding-bottom: 90px
 	box-sizing: border-box
 
+.hidden
+	display: none
+
 
 @import "helpers/icon.sass"
 @import "helpers/form.sass"
@@ -69,6 +82,7 @@ body
 @import "blocks/company-line.sass"
 @import "blocks/alert.sass"
 @import "blocks/manager.sass"
+@import "blocks/popup.sass"
 @import "blocks/footer.sass"
 
 .selectize-input
@@ -172,29 +186,51 @@ body
 			border-radius: 5px
 
 
+.statistic-stage
+	&__text
+		font-size: 15px
+		color: $c9
+	&__opt
+		margin-top: 10px
+		.statistic-stage__text
+			display: inline-block
+			margin-right: 10px
 
-.attendance-stage
+
+.period-stage
 	text-align: right
 	&__text
 		font-size: 18px
 
-.attendance-block
+.period-block
 	display: inline-block
 	margin: 0 6px
 	height: 38px
 	font-size: 15px
 	box-sizing: border-box
 	padding: 9px 20px
-
+	cursor: pointer
+	background-color: #dedcdd
+	border-radius: 3px
+	color: $c8
+	border: 1px solid transparent
+	&.active
+		background-color: $c14
+		color: #fff
+		&:hover
+			background-color: $c14
+			color: #fff
+	&:hover
+		@extend .period-block_border
+		@extend .period-block_white
 	&_icon
 		background-image: url(media/img/attendance.png)
 		background-repeat: no-repeat
 		background-position: 10px 10px
 		padding-left: 30px
 	&_border
-		border: 1px solid rgba($c7,.4)
-		border-radius: 3px
-		color: $c8
+		border-color: rgba($c7,.4)
+		
 	&_white
 		background-color: #fff
 	&.datetimepiker
@@ -488,6 +524,10 @@ body
 
 
 @import "pages/support.sass"
+@import "pages/work.sass"
+@import "pages/index.sass"
+
+
 
 .hr
 	margin: 0
@@ -498,10 +538,20 @@ body
 	display: inline-block
 	padding: 5px
 	vertical-align: middle
+	margin-left: 3px
+	&:first-child
+		margin-left: 0
 	&__group
 		display: inline-block
 		vertical-align: middle
 		margin-left: 10px
+	&:hover
+		.icon
+			&_pen
+				@extend .icon_pen_h
+			&_del
+				@extend .icon_del_h
+
 
 //ALWAYS END
 //@import "basic/_media.sass"
